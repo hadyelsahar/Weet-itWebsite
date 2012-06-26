@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Weetit_webite.ServiceReference1;
+using Weetit_website.ServiceReference1;
 
 namespace Weetit_webite.classes
 {

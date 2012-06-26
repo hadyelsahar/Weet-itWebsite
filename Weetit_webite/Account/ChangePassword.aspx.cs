@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Weetit_webite.Account
+namespace Weetit_website.Account
 {
     public partial class ChangePassword : System.Web.UI.Page
     {

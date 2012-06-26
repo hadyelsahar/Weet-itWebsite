@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Weetit_webite {
+namespace Weetit_website {
     
     
     public partial class SiteMaster {

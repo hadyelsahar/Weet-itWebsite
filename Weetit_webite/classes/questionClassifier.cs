@@ -6,7 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Weetit_webite
+namespace Weetit_website
 {
     class questionClassifier
     {

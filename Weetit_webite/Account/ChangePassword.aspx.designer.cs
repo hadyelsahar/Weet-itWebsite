@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Weetit_webite.Account
+namespace Weetit_website.Account
 {
 
 

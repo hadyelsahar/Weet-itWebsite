@@ -9,7 +9,6 @@
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/UX/compare.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -66,23 +65,80 @@
                     <div class="datarow">
                         <div class="datacell">
                             <img src="img/852221_f496.jpg" />
-                            <p>
-                                Drogba</p>
+                            <div class="title">drogba</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
                         </div>
                         <div class="datacell">
                             <img src="img/852221_f496.jpg" />
-                            <p>
-                                Messi</p>
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                        </div>
+                        
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
                         </div>
                         <div class="datacell">
                             <img src="img/852221_f496.jpg" />
-                            <p>
-                                Beckham</p>
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
                         </div>
                         <div class="datacell">
                             <img src="img/852221_f496.jpg" />
-                            <p>
-                                Hamada</p>
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/852221_f496.jpg" />
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/852221_f496.jpg" />
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
+                             <div class="title">angelina joulie</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/220px-WikiBex.jpg" />
+                              <div class="title">tom hanks</div>
+                        </div>
+                        <div class="datacell">
+                            <img src="img/852221_f496.jpg" />
+                              <div class="title">pirates of the carribian part II the ghost rechon</div>
                         </div>
                         <div class="clearfix">
                         </div>

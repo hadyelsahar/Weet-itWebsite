@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Weetit_webite.ServiceReference1 {
+namespace Weetit_website.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,13 +23,13 @@ namespace Weetit_webite.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.entity destinationField;
+        private Weetit_website.ServiceReference1.entity destinationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.entity[] entitiesField;
+        private Weetit_website.ServiceReference1.entity[] entitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.entity sourceField;
+        private Weetit_website.ServiceReference1.entity sourceField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,7 +42,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.entity destination {
+        public Weetit_website.ServiceReference1.entity destination {
             get {
                 return this.destinationField;
             }
@@ -55,7 +55,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.entity[] entities {
+        public Weetit_website.ServiceReference1.entity[] entities {
             get {
                 return this.entitiesField;
             }
@@ -68,7 +68,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.entity source {
+        public Weetit_website.ServiceReference1.entity source {
             get {
                 return this.sourceField;
             }
@@ -103,7 +103,7 @@ namespace Weetit_webite.ServiceReference1 {
         private string labelField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.entity nextField;
+        private Weetit_website.ServiceReference1.entity nextField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string uriField;
@@ -132,7 +132,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.entity next {
+        public Weetit_website.ServiceReference1.entity next {
             get {
                 return this.nextField;
             }
@@ -192,7 +192,7 @@ namespace Weetit_webite.ServiceReference1 {
         private System.Collections.Generic.Dictionary<string, string> predicateUriListField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.utilquestionTypes questiontypeField;
+        private Weetit_website.ServiceReference1.utilquestionTypes questiontypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.Dictionary<string, string> subjectLabelListField;
@@ -276,7 +276,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.utilquestionTypes questiontype {
+        public Weetit_website.ServiceReference1.utilquestionTypes questiontype {
             get {
                 return this.questiontypeField;
             }
@@ -363,7 +363,7 @@ namespace Weetit_webite.ServiceReference1 {
         private string[] objectUriListField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.utilquestionTypes questiontypeField;
+        private Weetit_website.ServiceReference1.utilquestionTypes questiontypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -415,7 +415,7 @@ namespace Weetit_webite.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.utilquestionTypes questiontype {
+        public Weetit_website.ServiceReference1.utilquestionTypes questiontype {
             get {
                 return this.questiontypeField;
             }
@@ -596,9 +596,9 @@ namespace Weetit_webite.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Profile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.MicroProfile))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.MiniProfile))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.FullProfile))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.MicroProfile))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.MiniProfile))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.FullProfile))]
     public partial class Profile : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -628,9 +628,9 @@ namespace Weetit_webite.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MicroProfile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.MiniProfile))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.FullProfile))]
-    public partial class MicroProfile : Weetit_webite.ServiceReference1.Profile {
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.MiniProfile))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.FullProfile))]
+    public partial class MicroProfile : Weetit_website.ServiceReference1.Profile {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string AbstractField;
@@ -701,14 +701,14 @@ namespace Weetit_webite.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MiniProfile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_webite.ServiceReference1.FullProfile))]
-    public partial class MiniProfile : Weetit_webite.ServiceReference1.MicroProfile {
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Weetit_website.ServiceReference1.FullProfile))]
+    public partial class MiniProfile : Weetit_website.ServiceReference1.MicroProfile {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.KeyValuePair<string, Weetit_webite.ServiceReference1.Entity1[]>[] DetailsField;
+        private System.Collections.Generic.KeyValuePair<string, Weetit_website.ServiceReference1.Entity1[]>[] DetailsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.KeyValuePair<string, Weetit_webite.ServiceReference1.Entity1[]>[] Details {
+        public System.Collections.Generic.KeyValuePair<string, Weetit_website.ServiceReference1.Entity1[]>[] Details {
             get {
                 return this.DetailsField;
             }
@@ -725,13 +725,13 @@ namespace Weetit_webite.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FullProfile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
     [System.SerializableAttribute()]
-    public partial class FullProfile : Weetit_webite.ServiceReference1.MiniProfile {
+    public partial class FullProfile : Weetit_website.ServiceReference1.MiniProfile {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Weetit_webite.ServiceReference1.Entity1[] RelatedField;
+        private Weetit_website.ServiceReference1.Entity1[] RelatedField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Weetit_webite.ServiceReference1.Entity1[] Related {
+        public Weetit_website.ServiceReference1.Entity1[] Related {
             get {
                 return this.RelatedField;
             }
@@ -833,20 +833,20 @@ namespace Weetit_webite.ServiceReference1 {
         System.Collections.Generic.KeyValuePair<string, string>[][] simpleGetRelationWithLabels(string[] uri, int Distance, int Limit);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RelationGeneratorServiceInterface/getRelations", ReplyAction="http://tempuri.org/RelationGeneratorServiceInterface/getRelationsResponse")]
-        Weetit_webite.ServiceReference1.relation[] getRelations(string[] uri, int Distance, int Limit);
+        Weetit_website.ServiceReference1.relation[] getRelations(string[] uri, int Distance, int Limit);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/RelationGeneratorServiceInterface/getRelationWithLabels", ReplyAction="http://tempuri.org/RelationGeneratorServiceInterface/getRelationWithLabelsRespons" +
             "e")]
-        Weetit_webite.ServiceReference1.relation[] getRelationWithLabels(string[] uri, int Distance, int Limit);
+        Weetit_website.ServiceReference1.relation[] getRelationWithLabels(string[] uri, int Distance, int Limit);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface RelationGeneratorServiceInterfaceChannel : Weetit_webite.ServiceReference1.RelationGeneratorServiceInterface, System.ServiceModel.IClientChannel {
+    public interface RelationGeneratorServiceInterfaceChannel : Weetit_website.ServiceReference1.RelationGeneratorServiceInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RelationGeneratorServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.RelationGeneratorServiceInterface>, Weetit_webite.ServiceReference1.RelationGeneratorServiceInterface {
+    public partial class RelationGeneratorServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.RelationGeneratorServiceInterface>, Weetit_website.ServiceReference1.RelationGeneratorServiceInterface {
         
         public RelationGeneratorServiceInterfaceClient() {
         }
@@ -875,11 +875,11 @@ namespace Weetit_webite.ServiceReference1 {
             return base.Channel.simpleGetRelationWithLabels(uri, Distance, Limit);
         }
         
-        public Weetit_webite.ServiceReference1.relation[] getRelations(string[] uri, int Distance, int Limit) {
+        public Weetit_website.ServiceReference1.relation[] getRelations(string[] uri, int Distance, int Limit) {
             return base.Channel.getRelations(uri, Distance, Limit);
         }
         
-        public Weetit_webite.ServiceReference1.relation[] getRelationWithLabels(string[] uri, int Distance, int Limit) {
+        public Weetit_website.ServiceReference1.relation[] getRelationWithLabels(string[] uri, int Distance, int Limit) {
             return base.Channel.getRelationWithLabels(uri, Distance, Limit);
         }
     }
@@ -909,12 +909,12 @@ namespace Weetit_webite.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface keywordSearchServiceInterfaceChannel : Weetit_webite.ServiceReference1.keywordSearchServiceInterface, System.ServiceModel.IClientChannel {
+    public interface keywordSearchServiceInterfaceChannel : Weetit_website.ServiceReference1.keywordSearchServiceInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class keywordSearchServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.keywordSearchServiceInterface>, Weetit_webite.ServiceReference1.keywordSearchServiceInterface {
+    public partial class keywordSearchServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.keywordSearchServiceInterface>, Weetit_website.ServiceReference1.keywordSearchServiceInterface {
         
         public keywordSearchServiceInterfaceClient() {
         }
@@ -965,19 +965,19 @@ namespace Weetit_webite.ServiceReference1 {
     public interface QAServiceInterface {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/QAServiceInterface/GetAnswerWithQuestionStructure", ReplyAction="http://tempuri.org/QAServiceInterface/GetAnswerWithQuestionStructureResponse")]
-        Weetit_webite.ServiceReference1.questionAnswer[] GetAnswerWithQuestionStructure(string question);
+        Weetit_website.ServiceReference1.questionAnswer[] GetAnswerWithQuestionStructure(string question);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/QAServiceInterface/GetPartialAnswer", ReplyAction="http://tempuri.org/QAServiceInterface/GetPartialAnswerResponse")]
-        Weetit_webite.ServiceReference1.PartialAnswer[] GetPartialAnswer(string question);
+        Weetit_website.ServiceReference1.PartialAnswer[] GetPartialAnswer(string question);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface QAServiceInterfaceChannel : Weetit_webite.ServiceReference1.QAServiceInterface, System.ServiceModel.IClientChannel {
+    public interface QAServiceInterfaceChannel : Weetit_website.ServiceReference1.QAServiceInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class QAServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.QAServiceInterface>, Weetit_webite.ServiceReference1.QAServiceInterface {
+    public partial class QAServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.QAServiceInterface>, Weetit_website.ServiceReference1.QAServiceInterface {
         
         public QAServiceInterfaceClient() {
         }
@@ -998,11 +998,11 @@ namespace Weetit_webite.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Weetit_webite.ServiceReference1.questionAnswer[] GetAnswerWithQuestionStructure(string question) {
+        public Weetit_website.ServiceReference1.questionAnswer[] GetAnswerWithQuestionStructure(string question) {
             return base.Channel.GetAnswerWithQuestionStructure(question);
         }
         
-        public Weetit_webite.ServiceReference1.PartialAnswer[] GetPartialAnswer(string question) {
+        public Weetit_website.ServiceReference1.PartialAnswer[] GetPartialAnswer(string question) {
             return base.Channel.GetPartialAnswer(question);
         }
     }
@@ -1016,12 +1016,12 @@ namespace Weetit_webite.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CompareWithOnePredicateInterfaceChannel : Weetit_webite.ServiceReference1.CompareWithOnePredicateInterface, System.ServiceModel.IClientChannel {
+    public interface CompareWithOnePredicateInterfaceChannel : Weetit_website.ServiceReference1.CompareWithOnePredicateInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CompareWithOnePredicateInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.CompareWithOnePredicateInterface>, Weetit_webite.ServiceReference1.CompareWithOnePredicateInterface {
+    public partial class CompareWithOnePredicateInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.CompareWithOnePredicateInterface>, Weetit_website.ServiceReference1.CompareWithOnePredicateInterface {
         
         public CompareWithOnePredicateInterfaceClient() {
         }
@@ -1052,30 +1052,30 @@ namespace Weetit_webite.ServiceReference1 {
     public interface ComparisonServiceInterface {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ComparisonServiceInterface/Compare", ReplyAction="http://tempuri.org/ComparisonServiceInterface/CompareResponse")]
-        Weetit_webite.ServiceReference1.ResourceInformation[] Compare(string[] URIs);
+        Weetit_website.ServiceReference1.ResourceInformation[] Compare(string[] URIs);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ComparisonServiceInterface/getID", ReplyAction="http://tempuri.org/ComparisonServiceInterface/getIDResponse")]
-        System.Collections.Generic.KeyValuePair<string, string> getID(Weetit_webite.ServiceReference1.ResourceInformation ri);
+        System.Collections.Generic.KeyValuePair<string, string> getID(Weetit_website.ServiceReference1.ResourceInformation ri);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ComparisonServiceInterface/getPredicates_ResourceIsSubj", ReplyAction="http://tempuri.org/ComparisonServiceInterface/getPredicates_ResourceIsSubjRespons" +
             "e")]
-        System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsSubj(Weetit_webite.ServiceReference1.ResourceInformation ri);
+        System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsSubj(Weetit_website.ServiceReference1.ResourceInformation ri);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ComparisonServiceInterface/getPredicates_ResourceIsObj", ReplyAction="http://tempuri.org/ComparisonServiceInterface/getPredicates_ResourceIsObjResponse" +
             "")]
-        System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsObj(Weetit_webite.ServiceReference1.ResourceInformation ri);
+        System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsObj(Weetit_website.ServiceReference1.ResourceInformation ri);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ComparisonServiceInterface/getResourcesOfPredicate", ReplyAction="http://tempuri.org/ComparisonServiceInterface/getResourcesOfPredicateResponse")]
-        System.Collections.Generic.KeyValuePair<string, string>[] getResourcesOfPredicate(System.Collections.Generic.KeyValuePair<string, string> pred, Weetit_webite.ServiceReference1.ResourceInformation ri);
+        System.Collections.Generic.KeyValuePair<string, string>[] getResourcesOfPredicate(System.Collections.Generic.KeyValuePair<string, string> pred, Weetit_website.ServiceReference1.ResourceInformation ri);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ComparisonServiceInterfaceChannel : Weetit_webite.ServiceReference1.ComparisonServiceInterface, System.ServiceModel.IClientChannel {
+    public interface ComparisonServiceInterfaceChannel : Weetit_website.ServiceReference1.ComparisonServiceInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ComparisonServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.ComparisonServiceInterface>, Weetit_webite.ServiceReference1.ComparisonServiceInterface {
+    public partial class ComparisonServiceInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.ComparisonServiceInterface>, Weetit_website.ServiceReference1.ComparisonServiceInterface {
         
         public ComparisonServiceInterfaceClient() {
         }
@@ -1096,23 +1096,23 @@ namespace Weetit_webite.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Weetit_webite.ServiceReference1.ResourceInformation[] Compare(string[] URIs) {
+        public Weetit_website.ServiceReference1.ResourceInformation[] Compare(string[] URIs) {
             return base.Channel.Compare(URIs);
         }
         
-        public System.Collections.Generic.KeyValuePair<string, string> getID(Weetit_webite.ServiceReference1.ResourceInformation ri) {
+        public System.Collections.Generic.KeyValuePair<string, string> getID(Weetit_website.ServiceReference1.ResourceInformation ri) {
             return base.Channel.getID(ri);
         }
         
-        public System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsSubj(Weetit_webite.ServiceReference1.ResourceInformation ri) {
+        public System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsSubj(Weetit_website.ServiceReference1.ResourceInformation ri) {
             return base.Channel.getPredicates_ResourceIsSubj(ri);
         }
         
-        public System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsObj(Weetit_webite.ServiceReference1.ResourceInformation ri) {
+        public System.Collections.Generic.KeyValuePair<string, string>[] getPredicates_ResourceIsObj(Weetit_website.ServiceReference1.ResourceInformation ri) {
             return base.Channel.getPredicates_ResourceIsObj(ri);
         }
         
-        public System.Collections.Generic.KeyValuePair<string, string>[] getResourcesOfPredicate(System.Collections.Generic.KeyValuePair<string, string> pred, Weetit_webite.ServiceReference1.ResourceInformation ri) {
+        public System.Collections.Generic.KeyValuePair<string, string>[] getResourcesOfPredicate(System.Collections.Generic.KeyValuePair<string, string> pred, Weetit_website.ServiceReference1.ResourceInformation ri) {
             return base.Channel.getResourcesOfPredicate(pred, ri);
         }
     }
@@ -1122,16 +1122,16 @@ namespace Weetit_webite.ServiceReference1 {
     public interface ProfileConstructorInterface {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ProfileConstructorInterface/ConstructProfile", ReplyAction="http://tempuri.org/ProfileConstructorInterface/ConstructProfileResponse")]
-        Weetit_webite.ServiceReference1.Profile ConstructProfile(string subjectURI, Weetit_webite.ServiceReference1.MergedServicechoiceProfile profile, int resultLimit);
+        Weetit_website.ServiceReference1.Profile ConstructProfile(string subjectURI, Weetit_website.ServiceReference1.MergedServicechoiceProfile profile, int resultLimit);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProfileConstructorInterfaceChannel : Weetit_webite.ServiceReference1.ProfileConstructorInterface, System.ServiceModel.IClientChannel {
+    public interface ProfileConstructorInterfaceChannel : Weetit_website.ServiceReference1.ProfileConstructorInterface, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProfileConstructorInterfaceClient : System.ServiceModel.ClientBase<Weetit_webite.ServiceReference1.ProfileConstructorInterface>, Weetit_webite.ServiceReference1.ProfileConstructorInterface {
+    public partial class ProfileConstructorInterfaceClient : System.ServiceModel.ClientBase<Weetit_website.ServiceReference1.ProfileConstructorInterface>, Weetit_website.ServiceReference1.ProfileConstructorInterface {
         
         public ProfileConstructorInterfaceClient() {
         }
@@ -1152,7 +1152,7 @@ namespace Weetit_webite.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Weetit_webite.ServiceReference1.Profile ConstructProfile(string subjectURI, Weetit_webite.ServiceReference1.MergedServicechoiceProfile profile, int resultLimit) {
+        public Weetit_website.ServiceReference1.Profile ConstructProfile(string subjectURI, Weetit_website.ServiceReference1.MergedServicechoiceProfile profile, int resultLimit) {
             return base.Channel.ConstructProfile(subjectURI, profile, resultLimit);
         }
     }
