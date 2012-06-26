@@ -92,6 +92,10 @@ border-left:1px solid;
     height: 35px;
     float:left;
 }
+.header .searcharea 
+{
+ padding-bottom:5px;   
+}
 
 .header .searcharea .searchinput
 {
@@ -160,14 +164,20 @@ border-left:1px solid;
 
 .header  .searcharea .addedEntitiesBox
 {
+    background-color:#f0f0f0;
     min-height: 10px;
     padding: 10px;
     width: 500px;
-    margin: auto;
+    
     border: 1px solid #DFDFDF;
     -webkit-border-radius: 8px;
     border-radius: 8px;
     display:none;
+    
+    position:relative;
+    left:135px;
+    margin: auto;
+    margin-bottom:15px;
 }
 
 .header .searcharea .addedEntitiesBox .title
@@ -175,7 +185,7 @@ border-left:1px solid;
     color: #969696;
     font-size: 12px;
     display:block;
-    margin-bottom:2px;
+    margin-bottom:2px; 
 }
 
 .header .searcharea .addedEntitiesBox .addedEntity

@@ -3,11 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>answer</title>
+    <title>compare</title>
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <link href="Styles/comparisonpage.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/UX/compare.js" type="text/javascript"></script>
+    <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,12 +39,7 @@
             </div>
             <div class="clearfix"></div>
             <div class="addedEntitiesBox">
-                <span class="title">Relate between:</span> <span class="addedEntity">Batman begins<img
-                    src="img/closeIconHover.png" /></span> <span class="addedEntity">how i met your mother
-                        <img src="img/closeIcon.png" />
-                    </span><span class="addedEntity">assasins creed<img src="img/closeIcon.png" /></span>
-                <span class="addedEntity">Hello<img src="img/closeIcon.png" /></span> <span class="addedEntity">
-                    anitvirus<img src="img/closeIcon.png" /></span>
+                <span class="title">Relate between:</span>
             </div>
         </div>
         <div class="clearfix">

@@ -3,3 +3,8 @@ E:\Users\hady\Documents\GitHub\Weet-it_Website\Weetit_webite\bin\Weetit_webite.p
 E:\Users\hady\Documents\GitHub\Weet-it_Website\Weetit_webite\obj\Debug\Weetit_webite.csprojResolveAssemblyReference.cache
 E:\Users\hady\Documents\GitHub\Weet-it_Website\Weetit_webite\obj\Debug\Weetit_webite.dll
 E:\Users\hady\Documents\GitHub\Weet-it_Website\Weetit_webite\obj\Debug\Weetit_webite.pdb
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\Weetit_webite\bin\Weetit_webite.dll
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\Weetit_webite\bin\Weetit_webite.pdb
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\Weetit_webite\obj\Debug\Weetit_webite.csprojResolveAssemblyReference.cache
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\Weetit_webite\obj\Debug\Weetit_webite.dll
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\Weetit_webite\obj\Debug\Weetit_webite.pdb
