@@ -1,0 +1,2 @@
+(what|when|where|how)\s(to|are|is|was|were|have|has|did)\s.*
+(who|how).*

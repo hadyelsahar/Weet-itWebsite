@@ -1,0 +1,238 @@
+﻿/*
+main background : #F3F3F3; 
+upper bar background : #372B2B; 
+
+buttons  up : #F1F1F1;
+buttons down : #E2E2E2;
+
+borders for text input and buttons and search boxes : #DFDFDF ; 
+
+color 1 : #969696
+
+color 2 : #
+
+*/
+
+.clearfix
+{
+    clear: both;
+}
+
+body
+{
+    font-family: Arial;
+    background-color: #F3F3F3;
+    margin: 0px;
+    color:#372B2B;
+    font-size:#372B2B;
+}
+
+.header
+{
+    height: 40px;
+    background-color: #372B2B;
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 999px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.header .topmenu
+{
+    float: right;
+}
+
+
+.header .topmenu ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header .topmenu ul li
+{
+    color: White;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    border-left: 1px solid;
+}
+
+.header .topmenu ul .first
+{
+    border: 0px;
+}
+
+.maincontainer .logo
+{
+    width: 525px;
+    height: 165px;
+    background-image: url('../img/logo.png');
+    margin: auto;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+}
+
+/* button width : 43 px */
+/* searchbox width : 443px */
+
+
+.maincontainer .searcharea
+{
+    margin: auto;
+    margin-top: 50px;
+}
+
+.maincontainer .searcharea .options
+{
+    max-width: 500px;
+    margin: auto;
+    color: #585858;
+    font-size: 15px;
+    border: 0px;
+}
+.maincontainer .searcharea .options span
+{
+    margin-left: 30px;
+    border: 0px;
+}
+
+.maincontainer .searcharea .options input
+{
+    width: 20px;
+    height: 13px;
+}
+.maincontainer .searcharea .options label
+{
+    padding: 2px;
+}
+
+.maincontainer .searcharea .searchbox
+{
+    width: 483px;
+    margin: auto;
+    position: relative;
+    margin-top:10px;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+.maincontainer .searcharea .searchinput
+{
+    padding-left:10px;
+    height: 38px;
+    width: 440px;
+    border: 1px #DFDFDF solid;
+    font-size: 18px;
+    color: #604A4A;
+    margin: auto;
+}
+
+.maincontainer .searcharea .searchbox input:focus
+{
+    border: 1px #f36324 solid;
+}
+
+.maincontainer .searcharea .button
+{
+    width: 41px;
+    height: 36px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px #C9C9C9 solid;
+}
+
+.maincontainer .searcharea .searchbox .addbutton
+{
+    background-image: url('../img/add.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    right :41px;
+    display:none;
+}
+
+.maincontainer .searcharea .searchbox .searchbutton
+{
+    background-image: url('../img/sb.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 41px;
+    height: 36px;
+    right:0px;
+}
+
+.maincontainer .searcharea .searchbox .searchbutton:hover
+{
+    background-image: url('../img/sb_hover.png');
+}
+
+.maincontainer .searcharea .searchbox .searchbutton:active
+{
+    background-image: url('../img/sb_clicked.png');
+}
+
+.maincontainer .searcharea .searchbox .addbutton:hover
+{
+    background-image: url('../img/add_hover.png');
+}
+
+.maincontainer .searcharea .searchbox .addbutton:active
+{
+    background-image: url('../img/add_clicked.png');
+}
+
+.maincontainer .searcharea .addedEntitiesBox
+{
+    min-height: 10px;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display:none;
+}
+
+.maincontainer .searcharea .addedEntitiesBox .title
+{
+    color: #969696;
+    font-size: 12px;
+    display:block;
+    margin-bottom:2px;
+}
+
+.maincontainer .searcharea .addedEntitiesBox .addedEntity
+{
+    max-width: 450px;
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #585858;
+    font-size: 15px;
+    position: relative;
+  
+}
+
+.maincontainer .searcharea .addedEntitiesBox .addedEntity:hover
+{
+    padding:2px;
+    color: #585858;
+    border: 1px solid #DFDFDF;
+}
+
+.maincontainer .searcharea .addedEntitiesBox .addedEntity img
+{
+    margin: 2px;
+}
+
+
+

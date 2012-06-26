@@ -1,0 +1,2 @@
+\s(relate|relation)\s.*\s(to|,|and|to|with|vs|between)\s.*
+^(relate|relation)\s.*\s(to|,|and|to|with|vs|between)\s.*

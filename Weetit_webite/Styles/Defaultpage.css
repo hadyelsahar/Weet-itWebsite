@@ -1,0 +1,260 @@
+﻿ body 
+{
+    font-family:arial ,Sans-Serif;
+    background-color:#F0F0F0;
+    color:#372B2B;
+    font-size:16px;
+
+    margin:0px;
+}
+.header
+{
+	background-color:#372B2B;	
+	padding:0;
+	margin:0;
+}
+.header .logo
+{
+    width:171px;
+    height:40px;
+    background-image:url('../img/logo2.png');
+    background-repeat:no-repeat;
+    margin-top:10px;
+    margin-left:10px;
+    float:left;
+}
+.header .topmenu 
+{
+    float:right;
+}
+.header .topmenu ul 
+{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+.header .topmenu ul li 
+{
+color:White;
+display:inline-block;
+padding-left:10px;
+padding-right:10px;
+margin-top:10px;
+border-left:1px solid;
+}
+.header .topmenu ul .first 
+{
+ border:0px;   
+}
+
+/*search bar*/
+.header .searcharea
+{
+    padding-top:35px;
+    margin: auto;
+}
+
+.header .searcharea .options
+{
+    max-width: 500px;
+    margin: auto;
+    color: #585858;
+    font-size: 15px;
+    border: 0px;
+    float:left;
+    padding-top:18px;
+    
+    margin-right:10px;
+}
+.header .searcharea .options span
+{
+    margin-left: 30px;
+    border: 0px;
+}
+
+.header .searcharea .options input
+{
+    width: 20px;
+    height: 13px;
+}
+.header .searcharea .options label
+{
+    padding: 2px;
+    color:white;
+}
+
+.header .searcharea .searchbox
+{
+    width: 483px;
+    position: relative;
+    margin-top:10px;
+    margin-bottom: 20px;
+    height: 35px;
+    float:left;
+}
+
+.header .searcharea .searchinput
+{
+    padding-left:10px;
+    height: 34px;
+    width: 440px;
+    border: 1px #DFDFDF solid;
+    font-size: 18px;
+    color: #604A4A;
+    margin: auto;
+}
+
+.header   .searcharea .searchbox input:focus
+{
+    border: 1px #f36324 solid;
+}
+
+.header   .searcharea .button
+{
+    width: 41px;
+    height: 36px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px #C9C9C9 solid;
+}
+
+.header  .searcharea .searchbox .addbutton
+{
+    background-image: url('../img/add.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    right :41px;
+   display:none;
+   
+}
+
+.header  .searcharea .searchbox .searchbutton
+{
+    background-image: url('../img/sb.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 41px;
+    height: 36px;
+    right:0px;
+}
+
+.header  .searcharea .searchbox .searchbutton:hover
+{
+    background-image: url('../img/sb_hover.png');
+}
+
+.header  .searcharea .searchbox .searchbutton:active
+{
+    background-image: url('../img/sb_clicked.png');
+}
+
+.header   .searcharea .searchbox .addbutton:hover
+{
+    background-image: url('../img/add_hover.png');
+}
+
+.header .searcharea .searchbox .addbutton:active
+{
+    background-image: url('../img/add_clicked.png');
+}
+
+.header  .searcharea .addedEntitiesBox
+{
+    min-height: 10px;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    border: 1px solid #DFDFDF;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display:none;
+}
+
+.header .searcharea .addedEntitiesBox .title
+{
+    color: #969696;
+    font-size: 12px;
+    display:block;
+    margin-bottom:2px;
+}
+
+.header .searcharea .addedEntitiesBox .addedEntity
+{
+    max-width: 450px;
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #585858;
+    font-size: 15px;
+    position: relative;  
+}
+
+.header .searcharea .addedEntitiesBox .addedEntity:hover
+{
+    padding:2px;
+    color: #585858;
+    border: 1px solid #DFDFDF;
+}
+
+.header .searcharea .addedEntitiesBox .addedEntity img
+{
+    margin: 2px;
+}
+
+
+
+
+/****************/
+
+
+
+
+
+.clearfix
+{
+    clear:both;
+}
+.contentwrapper
+{
+    margin:auto;
+    margin-top:25px;
+    width:1000px;
+}
+.contentwrapper .leftcol
+{
+    background:#F0F0F0;
+    float:left;
+    width:200px;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+.contentwrapper .answerbox
+{
+    border:1px solid #E2DEDE;
+    -webkit-border-radius: 10px;
+border-radius: 10px;
+    padding:30px;
+    width:700px;
+    padding-top:25px;
+    float:left;
+    overflow:hidden;
+    background-color:White;
+}
+.contentwrapper .rightcol
+{
+    background:#F0F0F0;
+    overflow:hidden;
+    float:left;
+    width:0px;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+.contentwrapper .clearfix
+{
+    clear:both;
+}

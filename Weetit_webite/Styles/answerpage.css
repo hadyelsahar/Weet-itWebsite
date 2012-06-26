@@ -1,0 +1,203 @@
+﻿/*
+colors
+
+upperBar color:#372B2B; 
+main background:#F3F3F3; 
+light border:#DFDFDF ;
+Text Title color:#372B2B ;
+text middle color:#372B2B;
+subtitle:color:#969696;
+
+*/
+img
+{
+}
+
+.title
+{
+    font-size: 24px;
+    color: #372B2B;
+    text-decoration: none;
+}
+
+.title:hover
+{
+       text-decoration:underline;
+}
+
+.subtitle
+{
+    margin-bottom: 10px;
+    color: #939393;
+    font-size: 12px;
+}
+
+.contentwrapper .answerbox .fullprofile .abstractcontainer
+{
+    padding: 10px;
+    border-bottom: 1px dashed #969696;
+}
+
+.contentwrapper .answerbox .fullprofile .profilepic
+{
+    float: left;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.contentwrapper .answerbox .fullprofile .profilepic img
+{
+    max-height: 250px;
+    max-width: 250px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.contentwrapper .answerbox .fullprofile .abstract
+{
+    color: #372B2B;
+}
+
+.contentwrapper .answerbox .fullprofile .relatedresults
+{
+    border-bottom: 1px dashed #969696;
+    padding: 10px;
+}
+
+.contentwrapper .answerbox .fullprofile .relatedresults img
+{
+    max-width: 75px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.contentwrapper .answerbox .fullprofile .profiledetails
+{
+    padding: 10px;
+}
+
+.contentwrapper .answerbox .fullprofile .profiledetails .detailstable
+{
+    border-collapse: collapse;
+}
+
+.contentwrapper .answerbox .fullprofile .profiledetails .detailstable td
+{
+    border: 0px;
+    padding: 5px;
+    border-bottom: 1px dashed #DFDFDF;
+}
+
+.contentwrapper .answerbox .fullprofile .profiledetails .detailstable .property
+{
+    color: #898989;
+    font-size: 14px;
+    width: 25%;
+    vertical-align: text-top;
+}
+
+.contentwrapper .answerbox .fullprofile .profiledetails .value
+{
+    width: 75%;
+    vertical-align: text-top;
+}
+
+.contentwrapper .answerbox .miniprofile
+{
+    padding: 10px;
+    border-bottom: 1px dashed #969696;
+}
+
+.contentwrapper .answerbox .miniprofile .minileft
+{
+    float: left;
+    padding: 10px;
+}
+.contentwrapper .answerbox .miniprofile .minileft img
+{
+    max-height: 200px;
+    max-width: 200px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+.contentwrapper .answerbox .miniprofile .miniright
+{
+    float: left;
+    width: 400px;
+}
+.contentwrapper .answerbox .miniprofile .miniright .title
+{
+    display:block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #DFDFDF;
+}
+
+.contentwrapper .answerbox .miniprofile .miniright .abstract
+{
+    border-bottom: 1px dashed #DFDFDF;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+contentwrapper .answerbox .miniprofile .minitable
+{
+    border-collapse: collapse;
+}
+.contentwrapper .answerbox .miniprofile .minitable td
+{
+    border: 0px;
+    padding: 5px;
+    border-bottom: 1px dashed #DFDFDF;
+}
+
+.contentwrapper .answerbox .miniprofile .minitable .property
+{
+        color: #898989;
+    font-size: 14px;
+    width: 25%;
+    vertical-align: text-top;
+
+ max-width:150px;
+}
+
+.contentwrapper .answerbox .microprofile
+{
+    padding: 10px;
+    border-bottom: 1px dashed #969696;
+}
+
+.contentwrapper .answerbox .microprofile .left
+{
+    float: left;
+    padding: 10px;
+}
+.contentwrapper .answerbox .microprofile .left img
+{
+    max-height: 100px;
+    max-width: 100px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+.contentwrapper .answerbox .microprofile .right
+{
+    float: left;
+    width: 400px;
+}
+.contentwrapper .answerbox .microprofile .right .title
+{
+    display:block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #DFDFDF;
+}
+
+.contentwrapper .answerbox .microprofile .right .abstract
+{
+  
+    margin-bottom: 5px;
+    padding: 10px;
+}

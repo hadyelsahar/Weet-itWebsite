@@ -1,0 +1,60 @@
+﻿.contentwrapper .answerbox .comparisonbox
+{
+    margin:0px;
+    padding:0px;
+    width:700px;
+    overflow:hidden;
+    display:none;
+}
+
+.contentwrapper .answerbox .comparisonbox .predicate
+{
+    font-size:x-large;
+    margin:0px;
+    padding:0px;
+    width:100px;
+    float:left;
+    text-align:center;
+}
+
+.contentwrapper .answerbox .comparisonbox .tableheader
+{
+    font-size:x-large;
+    margin:0px;
+    padding:0px;
+    width:100px;
+    float:left;
+    text-align:center;
+}
+
+
+.contentwrapper .answerbox .comparisonbox .window
+{
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    width:600px;
+    position:relative;
+}
+.contentwrapper .answerbox .comparisonbox .datarow
+{
+    margin:0px;
+    padding:0px;
+    position:relative;
+}
+
+.contentwrapper .answerbox .comparisonbox .datarow .datacell
+{
+    margin:0px;
+    padding:0px;
+    width:300px;
+    display:inline-block;
+    float:left;
+    text-align:center;
+}
+
+.contentwrapper .answerbox .comparisonbox .datarow .datacell img
+{
+    max-height:100px;
+    max-width:100px;
+}

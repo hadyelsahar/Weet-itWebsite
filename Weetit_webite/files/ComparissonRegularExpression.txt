@@ -1,0 +1,4 @@
+\s(compare|match|difference)\s.*\s(to|,|and|to|with|vs|between)\s.*
+^(compare|match|difference)\s.*\s(to|,|and|to|with|vs|between)\s.*
+\sdifferent.*\sfrom\s.*
+\svs\s
