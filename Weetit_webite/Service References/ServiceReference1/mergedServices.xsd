@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/mergedServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/mergedServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:complexType name="ArrayOfrelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="relation" nillable="true" type="tns:relation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfrelation" nillable="true" type="tns:ArrayOfrelation" />
+  <xs:complexType name="relation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="destination" nillable="true" type="tns:entity" />
+      <xs:element minOccurs="0" name="entities" nillable="true" type="tns:ArrayOfentity" />
+      <xs:element minOccurs="0" name="source" nillable="true" type="tns:entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="relation" nillable="true" type="tns:relation" />
+  <xs:complexType name="entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="next" nillable="true" type="tns:entity" />
+      <xs:element minOccurs="0" name="uri" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="entity" nillable="true" type="tns:entity" />
+  <xs:complexType name="ArrayOfentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="entity" nillable="true" type="tns:entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfentity" nillable="true" type="tns:ArrayOfentity" />
+  <xs:complexType name="ArrayOfquestionAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="questionAnswer" nillable="true" type="tns:questionAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfquestionAnswer" nillable="true" type="tns:ArrayOfquestionAnswer" />
+  <xs:complexType name="questionAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="answerCount" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="objectLabelList" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="objectUriList" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="predicateLabelList" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="predicateUriList" nillable="true" type="q4:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="questiontype" type="tns:util.questionTypes" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subjectLabelList" nillable="true" type="q5:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subjectUriList" nillable="true" type="q6:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="questionAnswer" nillable="true" type="tns:questionAnswer" />
+  <xs:simpleType name="util.questionTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="literalOrURIAnswer" />
+      <xs:enumeration value="literalAnswer" />
+      <xs:enumeration value="URIAsnwer" />
+      <xs:enumeration value="countAnswer" />
+      <xs:enumeration value="unkown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="util.questionTypes" nillable="true" type="tns:util.questionTypes" />
+  <xs:complexType name="ArrayOfPartialAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PartialAnswer" nillable="true" type="tns:PartialAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPartialAnswer" nillable="true" type="tns:ArrayOfPartialAnswer" />
+  <xs:complexType name="PartialAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="answerCount" type="xs:int" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="objectLabelList" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="objectUriList" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element minOccurs="0" name="questiontype" type="tns:util.questionTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PartialAnswer" nillable="true" type="tns:PartialAnswer" />
+  <xs:complexType name="ArrayOfResourceInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResourceInformation" nillable="true" type="tns:ResourceInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResourceInformation" nillable="true" type="tns:ArrayOfResourceInformation" />
+  <xs:complexType name="ResourceInformation">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="FinalComparisonObject" nillable="true" type="q9:ArrayOfKeyValuePairOfKeyValuePairOfstringstringArrayOfKeyValuePairOfstringstringwAe_SQn3R" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="ID" type="q10:KeyValuePairOfstringstring" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="predicates_resourceIsObj" nillable="true" type="q11:ArrayOfKeyValuePairOfstringstring" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="predicates_resourceIsSubj" nillable="true" type="q12:ArrayOfKeyValuePairOfstringstring" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="rawComparisonObject" nillable="true" type="q13:ArrayOfKeyValuePairOfKeyValuePairOfstringstringArrayOfKeyValuePairOfstringstringwAe_SQn3R" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="resources_resourceIsObj" nillable="true" type="q14:ArrayOfKeyValuePairOfstringstring" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="resources_resourceIsSubj" nillable="true" type="q15:ArrayOfKeyValuePairOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResourceInformation" nillable="true" type="tns:ResourceInformation" />
+  <xs:simpleType name="MergedService.choiceProfile">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="micro" />
+      <xs:enumeration value="mini" />
+      <xs:enumeration value="full" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MergedService.choiceProfile" nillable="true" type="tns:MergedService.choiceProfile" />
+  <xs:complexType name="Profile">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Profile" nillable="true" type="tns:Profile" />
+  <xs:complexType name="MicroProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Profile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Abstract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="URI" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MicroProfile" nillable="true" type="tns:MicroProfile" />
+  <xs:complexType name="MiniProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MicroProfile">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="Details" nillable="true" type="q16:ArrayOfKeyValuePairOfstringArrayOfEntityzneDqt_Pt" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MiniProfile" nillable="true" type="tns:MiniProfile" />
+  <xs:complexType name="ArrayOfEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Entity" nillable="true" type="tns:Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntity" nillable="true" type="tns:ArrayOfEntity" />
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Entity" nillable="true" type="tns:Entity" />
+  <xs:complexType name="FullProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MiniProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Related" nillable="true" type="tns:ArrayOfEntity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FullProfile" nillable="true" type="tns:FullProfile" />
+</xs:schema>

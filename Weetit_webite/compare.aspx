@@ -51,35 +51,35 @@
             </p>
         </div>
         <div class="answerbox">
-            <div class="testdiv">
+            <div class="GalleryButtons">
                 <button type="button" class="leftbutton" onclick="moveleft()">
                     Left</button>
                 <button type="button" class="rightbutton" onclick="moveright()">
                     Right</button>
             </div>
-            <div class="comparisonbox">
-                <div class="predicate tableheader">
+            <div class="comparisonbox tableheader">
+                <div class="predicate">
                     <p>
                     </p>
                 </div>
                 <div class="window">
                     <div class="datarow">
-                        <div class="datacell  tableheader">
+                        <div class="datacell">
                             <img src="img/852221_f496.jpg" />
                             <p>
                                 Drogba</p>
                         </div>
-                        <div class="datacell  tableheader">
+                        <div class="datacell">
                             <img src="img/852221_f496.jpg" />
                             <p>
                                 Messi</p>
                         </div>
-                        <div class="datacell  tableheader">
+                        <div class="datacell">
                             <img src="img/852221_f496.jpg" />
                             <p>
                                 Beckham</p>
                         </div>
-                        <div class="datacell  tableheader">
+                        <div class="datacell">
                             <img src="img/852221_f496.jpg" />
                             <p>
                                 Hamada</p>

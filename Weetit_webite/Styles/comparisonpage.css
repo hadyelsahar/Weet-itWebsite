@@ -1,13 +1,21 @@
 ﻿.contentwrapper .answerbox .comparisonbox
 {
     margin: 0px;
-    padding: 0px;
     width: 700px;
     overflow: hidden;
     display: none;
     border-bottom: 1px dashed #DFDFDF;
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:10px;   
+}
+
+.tableheader
+{
+    font-size:16px;
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    float: left;
+    text-align: center;
 }
 
 .contentwrapper .answerbox .comparisonbox .predicate
@@ -21,17 +29,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
-.contentwrapper .answerbox .comparisonbox .tableheader
-{
-    font-size: x-large;
-    margin: 0px;
-    padding: 0px;
-    width: 100px;
-    float: left;
-    text-align: center;
-}
-
 
 .contentwrapper .answerbox .comparisonbox .window
 {

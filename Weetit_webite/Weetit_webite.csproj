@@ -130,6 +130,7 @@
     <Compile Include="answer.aspx.designer.cs">
       <DependentUpon>answer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="classes\QuestionAnswerer.cs" />
     <Compile Include="classes\questionClassifier.cs" />
     <Compile Include="relate.aspx.cs">
       <DependentUpon>relate.aspx</DependentUpon>

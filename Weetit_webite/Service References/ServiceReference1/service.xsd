@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/mergedServices" />
+  <xs:element name="simpleGetRelations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uri" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="Distance" type="xs:int" />
+        <xs:element minOccurs="0" name="Limit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="simpleGetRelationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="simpleGetRelationsResult" nillable="true" type="q2:ArrayOfArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="simpleGetRelationWithLabels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uri" nillable="true" type="q3:ArrayOfstring" />
+        <xs:element minOccurs="0" name="Distance" type="xs:int" />
+        <xs:element minOccurs="0" name="Limit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="simpleGetRelationWithLabelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="simpleGetRelationWithLabelsResult" nillable="true" type="q4:ArrayOfArrayOfKeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uri" nillable="true" type="q5:ArrayOfstring" />
+        <xs:element minOccurs="0" name="Distance" type="xs:int" />
+        <xs:element minOccurs="0" name="Limit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationsResult" nillable="true" type="q6:ArrayOfrelation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelationWithLabels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uri" nillable="true" type="q7:ArrayOfstring" />
+        <xs:element minOccurs="0" name="Distance" type="xs:int" />
+        <xs:element minOccurs="0" name="Limit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getRelationWithLabelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationWithLabelsResult" nillable="true" type="q8:ArrayOfrelation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturi_bestMatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturi_bestMatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="geturi_bestMatchResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MaxUris" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="geturiResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUris_VsKeywords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUris_VsKeywordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetUris_VsKeywordsResult" nillable="true" type="q10:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUris_VsKeyword_comma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUris_VsKeyword_commaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUris_VsKeyword_commaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturis_List">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="keywords" nillable="true" type="q11:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturis_ListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="geturis_ListResult" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturis_List_WithMaxuris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="keywords" nillable="true" type="q13:ArrayOfstring" />
+        <xs:element minOccurs="0" name="MaxUris" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="geturis_List_WithMaxurisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="geturis_List_WithMaxurisResult" nillable="true" type="q14:ArrayOfArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnswerWithQuestionStructure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnswerWithQuestionStructureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="GetAnswerWithQuestionStructureResult" nillable="true" type="q15:ArrayOfquestionAnswer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartialAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="question" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPartialAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="GetPartialAnswerResult" nillable="true" type="q16:ArrayOfPartialAnswer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareWithRespect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subjectsNames" nillable="true" type="q17:ArrayOfstring" />
+        <xs:element minOccurs="0" name="predicateURI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="limit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareWithRespectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CompareWithRespectResult" nillable="true" type="q18:ArrayOfArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Compare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="URIs" nillable="true" type="q19:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="CompareResult" nillable="true" type="q20:ArrayOfResourceInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ri" nillable="true" type="q21:ResourceInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="getIDResult" type="q22:KeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicates_ResourceIsSubj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ri" nillable="true" type="q23:ResourceInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicates_ResourceIsSubjResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="getPredicates_ResourceIsSubjResult" nillable="true" type="q24:ArrayOfKeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicates_ResourceIsObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ri" nillable="true" type="q25:ResourceInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPredicates_ResourceIsObjResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="getPredicates_ResourceIsObjResult" nillable="true" type="q26:ArrayOfKeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResourcesOfPredicate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="pred" type="q27:KeyValuePairOfstringstring" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ri" nillable="true" type="q28:ResourceInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getResourcesOfPredicateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="getResourcesOfPredicateResult" nillable="true" type="q29:ArrayOfKeyValuePairOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstructProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="subjectURI" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="profile" type="q30:MergedService.choiceProfile" />
+        <xs:element minOccurs="0" name="resultLimit" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstructProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ConstructProfileResult" nillable="true" type="q31:Profile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
