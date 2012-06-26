@@ -58,7 +58,6 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="answer.aspx" />
     <Content Include="files\ComparissonRegularExpression.txt" />
-    <Content Include="files\QuestionRegularExpression.txt" />
     <Content Include="relate.aspx" />
     <Content Include="compare.aspx" />
     <Content Include="img\add.png" />
@@ -94,7 +93,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="files\Weetit_webite.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ChangePassword.aspx.cs">

@@ -8,39 +8,39 @@ using System.Web;
 
 namespace Weetit_webite
 {
-    class QuestionClassifier
+    class questionClassifier
     {
-        public enum types {question,compare,relate};
+        public enum types {question,comparison,relate};
         private string opText;
         public types ipType;
         private string[] buff;
         private List<string> objects = new List<string>();
-        private string[] separators = File.ReadAllLines(HttpContext.Current.Server.MapPath(@"~\files\Separators.txt"));
-        private string[] removesKeywords = File.ReadAllLines(HttpContext.Current.Server.MapPath(@"~\files\RemoveRegularExpression.txt"));
+        private string[] separators = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/Separators.txt"));
+        private string[] removesKeywords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/RemoveRegularExpression.txt"));
 
-        public QuestionClassifier(String ip)
+        public questionClassifier(String ip)
         {
             ip = ip.Trim();
             opText = ip;
             ipType = getSentenceType();
-        }
 
+        }
         private types getSentenceType()
         {
-            string[] compressionKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath(@"~\files\ComparissonRegularExpression.txt"));
-            Regex[] comparissonRegex = new Regex[compressionKeyWords.Length];
-            for (int i = 0; i < compressionKeyWords.Length; i++ )
+            string[] comparisonKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/ComparissonRegularExpression.txt"));
+            Regex[] comparisonRegex = new Regex[comparisonKeyWords.Length];
+            for (int i = 0; i < comparisonKeyWords.Length; i++ )
             {
-                comparissonRegex[i] = new Regex(compressionKeyWords[i]);
+                comparisonRegex[i] = new Regex(comparisonKeyWords[i]);
             }         
-            foreach (Regex regx in comparissonRegex)
+            foreach (Regex regx in comparisonRegex)
             {              
                 if (regx.IsMatch(opText))
                 {
-                    return(types.compare);
+                    return(types.comparison);
                 }
             }
-            string[] relateKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath(@"~\files\relateRegularExpression.txt"));
+            string[] relateKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/relateRegularExpression.txt"));
             Regex[] relateRegex = new Regex[relateKeyWords.Length];
             for (int i = 0; i < relateKeyWords.Length; i++)
             {
@@ -55,18 +55,20 @@ namespace Weetit_webite
             }
             return types.question;        
         }
+
+
+
         public List<string> getObjects()
         {
-            foreach (String separator in separators)
-            {
-                opText = opText.Replace(separator,",");
-            }
 
             foreach (String remove in removesKeywords)
             {
                 opText = Regex.Replace(opText, remove," ");
             }
-
+            foreach (String separator in separators)
+            {
+                opText = opText.Replace(separator, ",");
+            }
             buff = opText.Split(',');
             for (int i = 0; i < buff.Length; i++)
                 buff[i] = buff[i].Trim();

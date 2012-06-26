@@ -166,6 +166,31 @@
                 <div class="clearfix">
                 </div>
             </div>
+            <div class="comparisonbox">
+                <div class="predicate">
+                    Position
+                </div>
+                <div class="window">
+                    <div class="datarow">
+                        <div class="datacell">
+                            Striker
+                        </div>
+                        <div class="datacell">
+                            Midfielder/Winger
+                        </div>
+                        <div class="datacell">
+                            Midfielder
+                        </div>
+                        <div class="datacell">
+                            Goalkeeper
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
         </div>
         <div class="rightcol">
         </div>

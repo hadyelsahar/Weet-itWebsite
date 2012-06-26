@@ -12,16 +12,16 @@ namespace Weetit_webite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        
+
+
         }
 
         [WebMethod(EnableSession = false)]
         public static string getQuestionType(string data)
         {
-            QuestionClassifier classifier = new QuestionClassifier(data);
+            questionClassifier classifier = new questionClassifier(data);
             List<string> tempList = classifier.getObjects();
-            string returnData="";
+            string returnData = "";
             returnData += "{'type':'" + classifier.ipType.ToString() + "','data':";
             if (tempList.Count == 1)
             {
@@ -31,7 +31,7 @@ namespace Weetit_webite
             {
                 returnData += "[";
 
-                for (int i = 0 ; i < tempList.Count ; i++)
+                for (int i = 0; i < tempList.Count; i++)
                 {
                     if (i < tempList.Count - 1)
                     {
@@ -43,7 +43,7 @@ namespace Weetit_webite
                     }
                 }
             }
-            
+
             return returnData;
         }
     }

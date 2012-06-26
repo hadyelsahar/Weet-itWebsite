@@ -29,7 +29,7 @@ function submit(obj) {
                     case "question":
                         window.location = "answer.aspx";
                         break;
-                    case "compare":
+                    case "comparison":
                         window.location = "compare.aspx";
                         break;
                     case "relate":
