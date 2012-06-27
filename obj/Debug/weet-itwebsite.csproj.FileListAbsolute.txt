@@ -1,0 +1,4 @@
+E:\Users\hady\Desktop\weetit_website\weet-itwebsite\bin\weet-itwebsite.dll
+E:\Users\hady\Desktop\weetit_website\weet-itwebsite\bin\weet-itwebsite.pdb
+E:\Users\hady\Desktop\weetit_website\weet-itwebsite\obj\Debug\weet-itwebsite.dll
+E:\Users\hady\Desktop\weetit_website\weet-itwebsite\obj\Debug\weet-itwebsite.pdb
