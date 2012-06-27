@@ -2,3 +2,7 @@ E:\Users\hady\Desktop\weetit_website\weet-itwebsite\bin\weet-itwebsite.dll
 E:\Users\hady\Desktop\weetit_website\weet-itwebsite\bin\weet-itwebsite.pdb
 E:\Users\hady\Desktop\weetit_website\weet-itwebsite\obj\Debug\weet-itwebsite.dll
 E:\Users\hady\Desktop\weetit_website\weet-itwebsite\obj\Debug\weet-itwebsite.pdb
+E:\Dev\proj\Weet-itWebsite\bin\weet-itwebsite.dll
+E:\Dev\proj\Weet-itWebsite\bin\weet-itwebsite.pdb
+E:\Dev\proj\Weet-itWebsite\obj\Debug\weet-itwebsite.dll
+E:\Dev\proj\Weet-itWebsite\obj\Debug\weet-itwebsite.pdb
