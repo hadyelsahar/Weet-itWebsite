@@ -142,6 +142,37 @@ namespace weetit_website
                                 + "</div>"
                             + "</div>";
                         }
+                        else if (profile is LiteralProfile)
+                        {
+                            LiteralProfile LP = (LiteralProfile)profile;
+                            HTML += "<div class=\"miniprofile literalanswer\">"
+            + "<div class=\"minileft\">"
+            + "<img src=" + LP.imageURI + "/>"
+            + " </div>"
+            + "<div class=\"miniright\">"
+                + " <div>"
+                 + "<a class=\"title\" href=\"#\">" + LP.subjectLabel + "</a>"
+                 + "</div>"
+
+                   + "<div class=\"minitable\">"
+                    + "<table class=\"detailstable\">"
+                       + "<tr>"
+                       + "<td class=\"property\">"
+                                + LP.PredicateLabel
+                           + "</td>"
+                        + "<td class=\"value\">"
+                                + LP.objectValue + " " + LP.objectUnit
+                         + "</td>"
+                          + "</tr>"
+                          + "</table>"
+                   + "</div>"
+                + "</div>"
+               + "<div class =\"clearfix\">"
+             + "</div>"
+              + "</div>";
+
+
+                        }
                     }
                 }
             }

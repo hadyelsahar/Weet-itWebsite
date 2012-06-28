@@ -111,9 +111,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.LiteralProfile.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.PartialAnswer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

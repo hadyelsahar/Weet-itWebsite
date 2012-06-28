@@ -299,7 +299,7 @@
   <xs:element name="ConstructLiteralProfileResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ConstructLiteralProfileResult" nillable="true" type="q32:LiteralProfile" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ConstructLiteralProfileResult" nillable="true" type="q32:Profile" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
