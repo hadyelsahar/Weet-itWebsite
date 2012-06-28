@@ -163,6 +163,7 @@
     <Compile Include="answer.aspx.designer.cs">
       <DependentUpon>answer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="classes\LiteralAnswer.cs" />
     <Compile Include="classes\QuestionAnswerer.cs" />
     <Compile Include="classes\questionClassifier.cs" />
     <Compile Include="compare.aspx.cs">

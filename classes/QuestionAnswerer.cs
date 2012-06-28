@@ -41,7 +41,10 @@ namespace weetit_website
                         allAnswers.Add(microProfile);
                     }
                 }
-
+                else if (qAnswer.questiontype == utilquestionTypes.literalAnswer)
+                {
+                    
+                }
                 //literal answer starts here 
             }
             return allAnswers;
