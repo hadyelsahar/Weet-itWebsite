@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MergedService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MergedService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsp:Policy wsu:Id="WSHttpBinding_RelationGeneratorServiceInterface_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -744,7 +744,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateInterface_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateServiceInterface_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -840,7 +840,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateInterface_CompareWithRespect_Input_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateServiceInterface_CompareWithRespect_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -859,7 +859,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateInterface_CompareWithRespect_output_policy">
+  <wsp:Policy wsu:Id="WSHttpBinding_CompareWithOnePredicateServiceInterface_CompareWithRespect_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -1298,6 +1298,44 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ProfileConstructorInterface_ConstructLiteralProfile_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ProfileConstructorInterface_ConstructLiteralProfile_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
@@ -1379,10 +1417,10 @@
   <wsdl:message name="QAServiceInterface_GetPartialAnswer_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPartialAnswerResponse" />
   </wsdl:message>
-  <wsdl:message name="CompareWithOnePredicateInterface_CompareWithRespect_InputMessage">
+  <wsdl:message name="CompareWithOnePredicateServiceInterface_CompareWithRespect_InputMessage">
     <wsdl:part name="parameters" element="tns:CompareWithRespect" />
   </wsdl:message>
-  <wsdl:message name="CompareWithOnePredicateInterface_CompareWithRespect_OutputMessage">
+  <wsdl:message name="CompareWithOnePredicateServiceInterface_CompareWithRespect_OutputMessage">
     <wsdl:part name="parameters" element="tns:CompareWithRespectResponse" />
   </wsdl:message>
   <wsdl:message name="ComparisonServiceInterface_Compare_InputMessage">
@@ -1420,6 +1458,12 @@
   </wsdl:message>
   <wsdl:message name="ProfileConstructorInterface_ConstructProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConstructProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProfileConstructorInterface_ConstructLiteralProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConstructLiteralProfile" />
+  </wsdl:message>
+  <wsdl:message name="ProfileConstructorInterface_ConstructLiteralProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConstructLiteralProfileResponse" />
   </wsdl:message>
   <wsdl:portType name="RelationGeneratorServiceInterface">
     <wsdl:operation name="simpleGetRelations">
@@ -1475,10 +1519,10 @@
       <wsdl:output wsaw:Action="http://tempuri.org/QAServiceInterface/GetPartialAnswerResponse" message="tns:QAServiceInterface_GetPartialAnswer_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:portType name="CompareWithOnePredicateInterface">
+  <wsdl:portType name="CompareWithOnePredicateServiceInterface">
     <wsdl:operation name="CompareWithRespect">
-      <wsdl:input wsaw:Action="http://tempuri.org/CompareWithOnePredicateInterface/CompareWithRespect" message="tns:CompareWithOnePredicateInterface_CompareWithRespect_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/CompareWithOnePredicateInterface/CompareWithRespectResponse" message="tns:CompareWithOnePredicateInterface_CompareWithRespect_OutputMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/CompareWithOnePredicateServiceInterface/CompareWithRespect" message="tns:CompareWithOnePredicateServiceInterface_CompareWithRespect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/CompareWithOnePredicateServiceInterface/CompareWithRespectResponse" message="tns:CompareWithOnePredicateServiceInterface_CompareWithRespect_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="ComparisonServiceInterface">
@@ -1507,6 +1551,10 @@
     <wsdl:operation name="ConstructProfile">
       <wsdl:input wsaw:Action="http://tempuri.org/ProfileConstructorInterface/ConstructProfile" message="tns:ProfileConstructorInterface_ConstructProfile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ProfileConstructorInterface/ConstructProfileResponse" message="tns:ProfileConstructorInterface_ConstructProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConstructLiteralProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ProfileConstructorInterface/ConstructLiteralProfile" message="tns:ProfileConstructorInterface_ConstructLiteralProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ProfileConstructorInterface/ConstructLiteralProfileResponse" message="tns:ProfileConstructorInterface_ConstructLiteralProfile_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_RelationGeneratorServiceInterface" type="tns:RelationGeneratorServiceInterface">
@@ -1653,17 +1701,17 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:binding name="WSHttpBinding_CompareWithOnePredicateInterface" type="tns:CompareWithOnePredicateInterface">
-    <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateInterface_policy" />
+  <wsdl:binding name="WSHttpBinding_CompareWithOnePredicateServiceInterface" type="tns:CompareWithOnePredicateServiceInterface">
+    <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateServiceInterface_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="CompareWithRespect">
-      <soap12:operation soapAction="http://tempuri.org/CompareWithOnePredicateInterface/CompareWithRespect" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/CompareWithOnePredicateServiceInterface/CompareWithRespect" style="document" />
       <wsdl:input>
-        <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateInterface_CompareWithRespect_Input_policy" />
+        <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateServiceInterface_CompareWithRespect_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateInterface_CompareWithRespect_output_policy" />
+        <wsp:PolicyReference URI="#WSHttpBinding_CompareWithOnePredicateServiceInterface_CompareWithRespect_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -1741,6 +1789,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ConstructLiteralProfile">
+      <soap12:operation soapAction="http://tempuri.org/ProfileConstructorInterface/ConstructLiteralProfile" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ProfileConstructorInterface_ConstructLiteralProfile_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ProfileConstructorInterface_ConstructLiteralProfile_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="MergedService">
     <wsdl:port name="WSHttpBinding_RelationGeneratorServiceInterface" binding="tns:WSHttpBinding_RelationGeneratorServiceInterface">
@@ -1770,7 +1829,7 @@
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
-    <wsdl:port name="WSHttpBinding_CompareWithOnePredicateInterface" binding="tns:WSHttpBinding_CompareWithOnePredicateInterface">
+    <wsdl:port name="WSHttpBinding_CompareWithOnePredicateServiceInterface" binding="tns:WSHttpBinding_CompareWithOnePredicateServiceInterface">
       <soap12:address location="http://localhost:8732/Design_Time_Addresses/mergedServices/" />
       <wsa10:EndpointReference>
         <wsa10:Address>http://localhost:8732/Design_Time_Addresses/mergedServices/</wsa10:Address>

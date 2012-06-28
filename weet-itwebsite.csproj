@@ -111,6 +111,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.LiteralProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.PartialAnswer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -120,7 +123,7 @@
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.questionAnswer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.relation.datasource">
+    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.Relation1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.ResourceInformation.datasource">
@@ -163,7 +166,6 @@
     <Compile Include="answer.aspx.designer.cs">
       <DependentUpon>answer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="classes\LiteralAnswer.cs" />
     <Compile Include="classes\QuestionAnswerer.cs" />
     <Compile Include="classes\questionClassifier.cs" />
     <Compile Include="compare.aspx.cs">

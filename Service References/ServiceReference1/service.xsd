@@ -47,7 +47,7 @@
   <xs:element name="getRelationsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationsResult" nillable="true" type="q6:ArrayOfrelation" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationsResult" nillable="true" type="q6:ArrayOfRelation" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -63,7 +63,7 @@
   <xs:element name="getRelationWithLabelsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationWithLabelsResult" nillable="true" type="q8:ArrayOfrelation" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="getRelationWithLabelsResult" nillable="true" type="q8:ArrayOfRelation" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -281,6 +281,25 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ConstructProfileResult" nillable="true" type="q31:Profile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstructLiteralProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="subjectURI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="predicate_label" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject_label" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="object_URI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="object_value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pred_URI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConstructLiteralProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/mergedServices" minOccurs="0" name="ConstructLiteralProfileResult" nillable="true" type="q32:LiteralProfile" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

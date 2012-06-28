@@ -2,34 +2,34 @@
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/mergedServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/mergedServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
-  <xs:complexType name="ArrayOfrelation">
+  <xs:complexType name="ArrayOfRelation">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="relation" nillable="true" type="tns:relation" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Relation" nillable="true" type="tns:Relation" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfrelation" nillable="true" type="tns:ArrayOfrelation" />
-  <xs:complexType name="relation">
+  <xs:element name="ArrayOfRelation" nillable="true" type="tns:ArrayOfRelation" />
+  <xs:complexType name="Relation">
     <xs:sequence>
-      <xs:element minOccurs="0" name="destination" nillable="true" type="tns:entity" />
-      <xs:element minOccurs="0" name="entities" nillable="true" type="tns:ArrayOfentity" />
-      <xs:element minOccurs="0" name="source" nillable="true" type="tns:entity" />
+      <xs:element minOccurs="0" name="destination" nillable="true" type="tns:RelationEntity" />
+      <xs:element minOccurs="0" name="entities" nillable="true" type="tns:ArrayOfRelationEntity" />
+      <xs:element minOccurs="0" name="source" nillable="true" type="tns:RelationEntity" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="relation" nillable="true" type="tns:relation" />
-  <xs:complexType name="entity">
+  <xs:element name="Relation" nillable="true" type="tns:Relation" />
+  <xs:complexType name="RelationEntity">
     <xs:sequence>
       <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="next" nillable="true" type="tns:entity" />
+      <xs:element minOccurs="0" name="next" nillable="true" type="tns:RelationEntity" />
       <xs:element minOccurs="0" name="uri" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="entity" nillable="true" type="tns:entity" />
-  <xs:complexType name="ArrayOfentity">
+  <xs:element name="RelationEntity" nillable="true" type="tns:RelationEntity" />
+  <xs:complexType name="ArrayOfRelationEntity">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="entity" nillable="true" type="tns:entity" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelationEntity" nillable="true" type="tns:RelationEntity" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfentity" nillable="true" type="tns:ArrayOfentity" />
+  <xs:element name="ArrayOfRelationEntity" nillable="true" type="tns:ArrayOfRelationEntity" />
   <xs:complexType name="ArrayOfquestionAnswer">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="questionAnswer" nillable="true" type="tns:questionAnswer" />
@@ -104,6 +104,20 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="Profile" nillable="true" type="tns:Profile" />
+  <xs:complexType name="LiteralProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Profile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PredicateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="imageURI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objectUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="subjectLabel" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LiteralProfile" nillable="true" type="tns:LiteralProfile" />
   <xs:complexType name="MicroProfile">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Profile">
