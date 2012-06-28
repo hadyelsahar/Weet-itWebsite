@@ -1,7 +1,8 @@
 ﻿/// <reference path="jquery-1.4.1-vsdoc.js" />
+/// <reference path="../jquery-1.4.1.js" />
 
 
-var DATACELLSNUMBER=0;
+var DATACELLSNUMBER = 0;
 var counter = 0;
 
 function settableviewvariables() {
@@ -30,9 +31,17 @@ function moveleft() {
 ///event attachments
 
 
-$(document).ready(settableviewvariables);
+//$(document).ready();
 
 $(document).ready(function () {
+
+
+    settableviewvariables();
+
+    if (DATACELLSNUMBER > 2) {
+
+        $(".answerbox").append("<div class='GalleryButtons'><a href='#'  class='leftbutton' onclick='moveleft()'></a><a href='#' class='rightbutton' onclick='moveright()'></a></div>");
+    }
 
 
     $(window).keyup(function (event) {

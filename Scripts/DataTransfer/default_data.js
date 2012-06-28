@@ -13,7 +13,7 @@ function submit(obj) {
     //</para>
     //</summary>
 
-    if (obj.type.toLowerCase() == "q&a") {
+    if (obj.type.toLowerCase() == "question") {
 
         $.ajax({
             type: "POST",
@@ -23,17 +23,18 @@ function submit(obj) {
             dataType: "json",
             success: function (msg) {
                 console.log(msg);
+
                 eval("msg =" + msg.d);
 
                 switch (msg.type) {
                     case "question":
-                        window.location = "answer.aspx";
+                        window.location = "answer.aspx?q=" + msg.data;
                         break;
                     case "comparison":
-                        window.location = "compare.aspx";
+                        window.location = "compare.aspx?q=" + msg.data.join("+");
                         break;
                     case "relate":
-                        window.location = "relate.aspx";
+                        window.location = "relate.aspx?q=" + msg.data.join("+");
                         break;
 
                 }
@@ -45,12 +46,12 @@ function submit(obj) {
     }
     else if (obj.type.toLowerCase() == "compare") {
 
-        window.location = "compare.aspx";
+        window.location = "compare.aspx?q=" + obj.data.join("+");
 
     }
     else if (obj.type.toLowerCase() == "relate") {
 
-        window.location = "relate.aspx";
+        window.location = "relate.aspx?q=" + obj.data.join("+");
 
     }
 

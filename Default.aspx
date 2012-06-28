@@ -39,12 +39,7 @@
             </div>
             <div class="clearfix" ></div>
             <div class="addedEntitiesBox">
-                <span class="title">Relate between:</span> <span class="addedEntity">Batman begins<img
-                    src="img/closeIconHover.png" /></span> <span class="addedEntity">how i met your mother
-                        <img src="img/closeIcon.png" />
-                    </span><span class="addedEntity">assasins creed<img src="img/closeIcon.png" /></span>
-                <span class="addedEntity">Hello<img src="img/closeIcon.png" /></span> <span class="addedEntity">
-                    anitvirus<img src="img/closeIcon.png" /></span>
+                <span class="title"></span><span class="leftNum"></span>
             </div>
         </div>
         <div class="footer">

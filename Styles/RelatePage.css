@@ -1,0 +1,25 @@
+﻿.relatedObjects .relateTable .relatedmicro img
+{
+    max-width: 100px;
+    -webkit-border-radius: 10px;
+    border-radius: 15 px;
+}
+
+.relatedObjects .relateTable .relatedmicro p
+{
+margin-left:auto;
+margin-right:auto;
+
+}
+
+.contentwrapper .relationBox
+{
+    border:1px solid #E2DEDE;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding:30px;
+    padding-top:25px;
+    float:left;
+    overflow:hidden;
+    background-color:White;
+}

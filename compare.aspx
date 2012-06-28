@@ -38,7 +38,7 @@
             </div>
             <div class="clearfix"></div>
             <div class="addedEntitiesBox">
-                <span class="title">Relate between:</span>
+                <span class="title"></span><span class="leftNum"></span>
             </div>
         </div>
         <div class="clearfix">

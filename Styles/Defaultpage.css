@@ -164,7 +164,7 @@ border-left:1px solid;
 .header  .searcharea .addedEntitiesBox
 {
     background-color:#f0f0f0;
-    min-height: 10px;
+    min-height: 50px;
     padding: 10px;
     width: 500px;
     
@@ -177,6 +177,16 @@ border-left:1px solid;
     left:135px;
     margin: auto;
     margin-bottom:15px;
+}
+
+.header .searcharea .addedEntitiesBox .leftNum
+{
+  color: #969696;
+  font-size:10px;
+  position:absolute;
+  right:0px;
+  bottom:-8px;
+  padding:10px;
 }
 
 .header .searcharea .addedEntitiesBox .title

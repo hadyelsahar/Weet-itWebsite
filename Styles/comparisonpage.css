@@ -1,24 +1,33 @@
 ﻿.GalleryButtons
 {
    position:fixed;
-   top:50%;
+   top:30%;
    height:100px; 
    width:700px;
 }
-
 
 .GalleryButtons .leftbutton
 {
     float:left;
     position :relative ;
-    left:-50px;
+    left:-60px;
+    background-image:url('/img/leftarrow.png');
+    border:0px;
+    background-repeat:no-repeat;
+    width:45px;
+    height:58px;
 }
 
 .GalleryButtons .rightbutton
 {
     float:right;
      position :relative ;
-    right:-50px;
+    right:-60px;
+    background-image:url('/img/rightarrow.png');
+    background-repeat:no-repeat;
+    width:45px;
+    height:58px;
+    
 }
 
 .contentwrapper .answerbox .comparisonbox
