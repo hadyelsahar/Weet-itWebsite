@@ -51,7 +51,7 @@
             <p>
             </p>
         </div>
-        <div class="answerbox">
+        <div class="answerbox" id="answerbox" runat="server">
             <div class="comparisonbox tableheader">
                 <div class="predicate">
                     <p>
