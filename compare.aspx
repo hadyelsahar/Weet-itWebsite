@@ -8,6 +8,7 @@
     <link href="Styles/comparisonpage.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/UX/compare.js" type="text/javascript"></script>
+    <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
 </head>
 <body>
@@ -36,7 +37,8 @@
                 <input type="text" class="searchinput" /><a href="#" class="button addbutton"></a><a
                     href="#" class="button searchbutton"></a>
             </div>
-            <div class="clearfix"></div>
+            <div class="clearfix">
+            </div>
             <div class="addedEntitiesBox">
                 <span class="title"></span><span class="leftNum"></span>
             </div>
@@ -49,14 +51,7 @@
             <p>
             </p>
         </div>
-           <div class="GalleryButtons">
-                <button type="button" class="leftbutton" onclick="moveleft()">
-                    Left</button>
-                <button type="button" class="rightbutton" onclick="moveright()">
-                    Right</button>
-            </div>
         <div class="answerbox">
-         
             <div class="comparisonbox tableheader">
                 <div class="predicate">
                     <p>
@@ -66,80 +61,18 @@
                     <div class="datarow">
                         <div class="datacell">
                             <img src="img/852221_f496.jpg" />
-                            <div class="title">drogba</div>
+                            <div class="title">
+                                drogba</div>
                         </div>
                         <div class="datacell">
                             <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
-                        </div>
-                        
-                        <div class="datacell">
-                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                            <div class="title">
+                                angelina joulie</div>
                         </div>
                         <div class="datacell">
                             <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/_46571386_ac_0003130_d_0.jpg" />
-                             <div class="title">angelina joulie</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/220px-WikiBex.jpg" />
-                              <div class="title">tom hanks</div>
-                        </div>
-                        <div class="datacell">
-                            <img src="img/852221_f496.jpg" />
-                              <div class="title">pirates of the carribian part II the ghost rechon</div>
+                            <div class="title">
+                                angelina joulie</div>
                         </div>
                         <div class="clearfix">
                         </div>
@@ -161,10 +94,7 @@
                             Argentine
                         </div>
                         <div class="datacell">
-                            England
-                        </div>
-                        <div class="datacell">
-                            Egypt
+                            Argentine
                         </div>
                         <div class="clearfix">
                         </div>
@@ -185,61 +115,8 @@
                         <div class="datacell">
                             11-5-19884
                         </div>
-                        <div class="datacell">
+                         <div class="datacell">
                             11-5-19884
-                        </div>
-                        <div class="datacell">
-                            11-5-19884
-                        </div>
-                        <div class="clearfix">
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix">
-                </div>
-            </div>
-            <div class="comparisonbox">
-                <div class="predicate">
-                    Position
-                </div>
-                <div class="window">
-                    <div class="datarow">
-                        <div class="datacell">
-                            Striker
-                        </div>
-                        <div class="datacell">
-                            Midfielder/Winger
-                        </div>
-                        <div class="datacell">
-                            Midfielder
-                        </div>
-                        <div class="datacell">
-                            Goalkeeper
-                        </div>
-                        <div class="clearfix">
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix">
-                </div>
-            </div>
-            <div class="comparisonbox">
-                <div class="predicate">
-                    Position
-                </div>
-                <div class="window">
-                    <div class="datarow">
-                        <div class="datacell">
-                            Striker
-                        </div>
-                        <div class="datacell">
-                            Midfielder/Winger
-                        </div>
-                        <div class="datacell">
-                            Midfielder
-                        </div>
-                        <div class="datacell">
-                            Goalkeeper
                         </div>
                         <div class="clearfix">
                         </div>

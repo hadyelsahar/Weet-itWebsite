@@ -2,7 +2,7 @@
 /// <reference path="../jquery-1.4.1.js" />
 
 
-var DATACELLSNUMBER = 0;
+var DATACELLSNUMBER=0;
 var counter = 0;
 
 function settableviewvariables() {
