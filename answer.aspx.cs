@@ -22,33 +22,38 @@ namespace weetit_website
         {
             String question = Request.QueryString["q"];
             String HTML = "";
+            
             if (question != null)
             {
-                List<List<Profile>> diffProfiles = QuestionAnswerer.getAnswersInProfiles(question);
-                foreach (List<Profile> profiles in diffProfiles)
+                List<KeyValuePair<questionAnswer,List<Profile>>> QNDiffProfiles = QuestionAnswerer.getAnswersInProfiles(question);
+                foreach (KeyValuePair<questionAnswer,List<Profile>> QNProfiles in QNDiffProfiles)
                 {
+                    List<Profile> profiles = QNProfiles.Value;
+                    if (QNProfiles.Key.questiontype == utilquestionTypes.countAnswer)
+                        HTML += "<div>Number of results=" + profiles.Count;
                     foreach (Profile profile in profiles)
                     {
                         if (profile is FullProfile)
                         {
                             FullProfile fullProfile = (FullProfile)profile;
-                            HTML=showFullProfile(fullProfile);
+                            HTML+=showFullProfile(fullProfile);
                         }
+                            
                         else if (profile is MiniProfile)
                         {
                             MiniProfile miniProfile = (MiniProfile)profile;
-                            HTML = showMiniProfie(miniProfile);
+                            HTML+= showMiniProfie(miniProfile);
                             
                         }
                         else if (profile is MicroProfile)
                         {
                             MicroProfile microProfile = (MicroProfile)profile;
-                            HTML = showMicroProfile(microProfile);
+                            HTML+= showMicroProfile(microProfile);
                         }
                         else if (profile is LiteralProfile)
                         {
                             LiteralProfile LP = (LiteralProfile)profile;
-                            HTML = showLiteralProfile(LP);
+                            HTML += showLiteralProfile(LP);
                         }
                     }
                 }
@@ -67,6 +72,7 @@ namespace weetit_website
         {
             String HTML = "";
             String relatedImg = "";
+            String relatedName = "";
             String details = "";
             foreach (KeyValuePair<String, Entity[]> key in fullProfile.Details.ToList())
             {
@@ -78,22 +84,36 @@ namespace weetit_website
                             + "</td>"
                             + "<td class=\"value\">";
                     foreach (Entity en in key.Value)
-                        details += "<div class=\"line\">"
-                                    + en.Label
-                                + "</div>";
+                    {
+                        details += "<div class=\"line\">";
+                        if (en.URI != null)
+                            details += "<a href=\"answer.aspx?uri=" + en.URI + "\">" + en.Label + "</a>";
+                        else
+                            details += en.Label;
+                        details += "</div>";
+                    }
                     details += "</td>"
                             + "</tr>";
                 }
             }
             foreach (Entity rel in fullProfile.Related.ToList())
-                relatedImg += "<img src=\"" + rel.Picture + "\"/>";
+                relatedImg += "<td>"
+                                + "<div class=\"imgcontainer\">"
+                                    +"<a href=\"answer.aspx?uri="+rel.URI+"\">"+ "<img src=\"" + rel.Picture + "\"/>"+"</a>"
+                                + "</div>"
+                            + "</td>";
+            foreach (Entity rel in fullProfile.Related.ToList())
+                relatedName += "<td class=\"title\">"
+                                +"<a href=\"answer.aspx?uri="+rel.URI+"\">"+ rel.Label+"</a>"
+                            + "</td>";
+
             HTML += "<div class=\"fullprofile\">"
                     + "<div class=\"abstractcontainer\">"
                         + "<div class=\"profilepic\">"
                             + "<img src=\"" + fullProfile.Picture + "\" />"
                         + "</div>"
                         + "<div class=\"abstract\">"
-                            + "<a href=\"#\" class=\"title\">" + fullProfile.Label + "</a>"
+                            + "<a href=\"answer.aspx?uri="+fullProfile.URI+"\" class=\"title\">" + fullProfile.Label + "</a>"
                             + "<p class=\"abstracttext\">"
                                 + fullProfile.Abstract
                             + "</p>"
@@ -103,8 +123,15 @@ namespace weetit_website
                     + "</div>"
                     + "<div class=\"relatedresults\">"
                         + "<div class=\"subtitle\">"
-                            + "Related results</div>"
-                        + relatedImg
+                            + "Related Results</div>"
+                        +"<table class=\"relateTable\" id=\"headerTable\" runat=\"server\">"
+                            +"<tr>"
+                                + relatedImg
+                            +"</tr>"
+                            +"<tr>"
+                                +relatedName
+                            +"</tr>"
+                        +"</table>"
                     + "</div>"
                     + "<div class=\"profiledetails\">"
                         + "<div class=\"subtitle\">"
@@ -131,9 +158,14 @@ namespace weetit_website
                             + "</td>"
                             + "<td class=\"value\">";
                     foreach (Entity en in key.Value)
-                        details += "<div class=\"line\">"
-                                    + en.Label
-                                + "</div>";
+                    {
+                        details += "<div class=\"line\">";
+                        if (en.URI != null)
+                            details += "<a href=\"answer.aspx?uri=" + en.URI + "\">" + en.Label + "</a>";
+                        else
+                            details += en.Label;
+                        details+=                "</div>";
+                    }
                     details += "</td>"
                             + "</tr>";
                 }
@@ -144,7 +176,7 @@ namespace weetit_website
                         + "</div>"
                         + "<div class=\"miniright\">"
                             + "<div>"
-                                + "<a class=\"title\" href=\"#\">" + miniProfile.Label + "</a>"
+                                + "<a class=\"title\" href=\"answer.aspx?uri="+miniProfile.URI+"\">" + miniProfile.Label + "</a>"
                             + "</div>"
                         + "<div class=\"abstract\">"
                             + miniProfile.Abstract
@@ -170,7 +202,7 @@ namespace weetit_website
                                     + "</div>"
                                     + "<div class=\"right\">"
                                         + "<div>"
-                                            + "<a class=\"title\" href=\"#\">" + microProfile.Label + "</a>"
+                                            + "<a class=\"title\" href=\"answer.aspx?uri="+microProfile.URI+"\">" + microProfile.Label + "</a>"
                                         + "</div>"
                                         + "<div class=\"abstract\">"
                                             + microProfile.Abstract
