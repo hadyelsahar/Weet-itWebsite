@@ -1,6 +1,18 @@
 ﻿/// <reference path="../jquery-1.4.1-vsdoc.js" />
 /// <reference path="../json2.js" />
 
+function __constructURLPart(myarr) {
+    var x = "?";
+    for (e in myarr)
+    {
+        x = x + "q=" + myarr[e] + "&";
+    }
+
+    x = x.slice(0, x.length - 1);
+
+    return x;
+}
+
 function submit(obj) {
     //<summary>
     //a function takes an object of the query and takes it's type 
@@ -12,9 +24,8 @@ function submit(obj) {
     //other wise ti will contain array of things to compare between or relate between
     //</para>
     //</summary>
-
     if (obj.type.toLowerCase() == "question") {
-
+        debugger;
         $.ajax({
             type: "POST",
             url: "Default.aspx/getQuestionType",
@@ -23,7 +34,6 @@ function submit(obj) {
             dataType: "json",
             success: function (msg) {
                 console.log(msg);
-
                 eval("msg =" + msg.d);
 
                 switch (msg.type) {
@@ -31,38 +41,21 @@ function submit(obj) {
                         window.location = "answer.aspx?q=" + msg.data;
                         break;
                     case "comparison":
-                        window.location = "compare.aspx?q=" + msg.data.join("+");
+                        window.location = "compare.aspx" + __constructURLPart(msg.data);
                         break;
                     case "relate":
-                        window.location = "relate.aspx?q=" + msg.data.join("+");
+                        window.location = "relate.aspx" + __constructURLPart(msg.data);
                         break;
-
                 }
-
             }
         });
-
-
     }
     else if (obj.type.toLowerCase() == "compare") {
 
-        window.location = "compare.aspx?q=" + obj.data.join("+");
-
+        window.location = "compare.aspx" + __constructURLPart(obj.data);
     }
     else if (obj.type.toLowerCase() == "relate") {
 
-        window.location = "relate.aspx?q=" + obj.data.join("+");
-
+        window.location = "relate.aspx" + __constructURLPart(obj.data);
     }
-
-
-
-
-
 }
-
-
-$(document).ready(function () {
-
-
-});

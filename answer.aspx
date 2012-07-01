@@ -1,13 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="answer.aspx.cs" Inherits="weetit_website.answer" %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>answer</title>
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <link href="Styles/answerpage.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/UX/compare.js" type="text/javascript"></script>
+    <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
 </head>
 <body>
@@ -36,9 +38,10 @@
                 <input type="text" class="searchinput" /><a href="#" class="button addbutton"></a><a
                     href="#" class="button searchbutton"></a>
             </div>
-            <div class="clearfix"></div>
+            <div class="clearfix">
+            </div>
             <div class="addedEntitiesBox">
-               <span class="title"></span><span class="leftNum"></span>
+                <span class="title"></span><span class="leftNum"></span>
             </div>
         </div>
         <div class="clearfix">
@@ -56,7 +59,7 @@
                         <img src="testimg/220px-WikiBex.jpg" />
                     </div>
                     <div class="abstract">
-                        <a href="#" class="title">David Beckham </a>
+                        <a href="#" class="title">David Beckham</a>
                         <p class="abstracttext">
                             David Robert Joseph Beckham, (born 2 May 1975) is an English footballer who plays
                             midfield for Los Angeles Galaxy in Major League Soccer, having previously played,
@@ -73,11 +76,53 @@
                 </div>
                 <div class="relatedresults">
                     <div class="subtitle">
-                        Related results</div>
-                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                        related entities</div>
+                    <table class="relateTable" id="headerTable" runat="server">
+                        <tr>
+                            <td>
+                                <div class="imgcontainer">
+                                    <img src="testimg/220px-WikiBex.jpg" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="imgcontainer">
+                                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="imgcontainer">
+                                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="imgcontainer">
+                                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="imgcontainer">
+                                    <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">
+                                hany
+                            </td>
+                            <td class="title">
+                                hany
+                            </td>
+                            <td class="title">
+                                hany
+                            </td>
+                            <td class="title">
+                                islam
+                            </td>
+                            <td class="title">
+                                islam
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="profiledetails">
                     <div class="subtitle">
@@ -252,6 +297,30 @@
                         I'm coming there not to be a superstar. I'm coming there to be part of the team,
                         to work hard and to hopefully win things. With me, it's about football. I'm coming
                         there to make a difference. I'm coming there to play football
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+            <div class="miniprofile literalanswer">
+                <div class="minileft">
+                    <img src="852221_f496.jpg" />
+                </div>
+                <div class="miniright">
+                    <div>
+                        <a class="title" href="#">Tom clancy's The Ghost Recon </a>
+                    </div>
+                    <div class="minitable">
+                        <table class="detailstable">
+                            <tr>
+                                <td class="property">
+                                    Full Name
+                                </td>
+                                <td class="value">
+                                    David Robert Joseph Beckham
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="clearfix">

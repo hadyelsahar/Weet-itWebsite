@@ -1,10 +1,9 @@
 ﻿/// <reference path="../jquery-1.4.1-vsdoc.js" />
 
-
 var sentence;
 var sentncetype;
 var max = 5;
-var entityCounter;
+var counter;
 function stopadd() {
     if ($(".header .searcharea .addedEntitiesBox .addedEntity").length < max) {
         return false;
@@ -14,13 +13,50 @@ function stopadd() {
     }
 }
 
-
 function addedNum() {
 
-    entityCounter = max - $(".header .searcharea .addedEntitiesBox .addedEntity .text").length;
-    $(".header .searcharea .addedEntitiesBox .leftNum").html("Number of Left entities : " + entityCounter);
+    counter = max - $(".header .searcharea .addedEntitiesBox .addedEntity .text").length;
+    $(".header .searcharea .addedEntitiesBox .leftNum").html("Number of Left entities : " + counter);
 
 }
+
+
+function addEntitiesBox() {
+    $('.header .searcharea .searchbox .searchinput').focus();
+    if ($("input[name='option']:checked").val() == 'QA') {
+        $(".header .searcharea .searchbox .addbutton").fadeOut(200);
+        $(".header .searcharea .addedEntitiesBox ").fadeOut(200, function () {
+            $(".header .searcharea .addedEntitiesBox .title").text("");
+        });
+    }
+    else if ($("input[name='option']:checked").val() == 'compare') {
+        if ($(".header .searcharea .addedEntitiesBox .title").html() != "compare between") {
+            $(".header .searcharea .searchbox .addbutton").fadeIn(200);
+
+            $(".header .searcharea .addedEntitiesBox .title").fadeOut(200, function () {
+                $(".header .searcharea .addedEntitiesBox .title").text("Compare between");
+                $(".header .searcharea .addedEntitiesBox").fadeIn(200);
+                $(".header .searcharea .addedEntitiesBox .title").fadeIn(200);
+            });
+        }
+    }
+    else if ($("input[name='option']:checked").val() == 'relate') {
+        if ($(".header .searcharea .addedEntitiesBox .title").html() != "Relate between") {
+            $(".header .searcharea .searchbox .addbutton").fadeIn();
+            $(".header .searcharea .addedEntitiesBox").fadeIn();
+            $(".header .searcharea .addedEntitiesBox .title").fadeOut(200, function () {
+                $(".header .searcharea .addedEntitiesBox .title").text("Relate between");
+                $(".header .searcharea .addedEntitiesBox .title").fadeIn(200);
+            });
+        }
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -38,7 +74,6 @@ function enable() {
     return true;
 }
 
-///////////////////////////////////////////////////////////////
 
 function searchBegin() {
     ///<summary> 
@@ -62,14 +97,14 @@ function searchBegin() {
         else if ($("input[name='option']:checked").val() == 'relate') {
             sentncetype = "relate";
         }
+
     }
-    debugger;
+
     var obj = { "type": sentncetype, "data": sentence };
+    debugger;
     submit(obj);
 
 }
-
-//////////////////////////////////////////////////////////////////////////////////
 
 function addObject() {
     ///<summary> 
@@ -95,16 +130,24 @@ function addObject() {
   			    $(this).children('a.closeIcon').show();
   			});
     };
+
+
+
+
     $("a.closeIconHover").click(function () {
         $(this).parent().fadeOut(250, function () {
             $(this).remove();
             $('.header .searcharea .searchbox .searchinput').focus();
+            $(".header .searcharea .searchbox .addbutton").css("opacity", "1");
             addedNum();
         });
+
     });
+
+
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
 $(document).ready(function () {
     ///<summary> 
@@ -114,39 +157,10 @@ $(document).ready(function () {
     ///
     ///</summary>
     addedNum();
+    addEntitiesBox();
     $('.header .searcharea .searchbox .searchinput').focus();
 
-
-    $("input[name='option']").change(function () {
-        $('.header .searcharea .searchbox .searchinput').focus();
-        if ($("input[name='option']:checked").val() == 'QA') {
-            $(".header .searcharea .searchbox .addbutton").fadeOut(200);
-            $(".header .searcharea .addedEntitiesBox ").fadeOut(200, function () {
-                $(".header .searcharea .addedEntitiesBox .title").text("");
-            });
-        }
-        else if ($("input[name='option']:checked").val() == 'compare') {
-            if ($(".header .searcharea .addedEntitiesBox .title").html() != "compare between") {
-                $(".header .searcharea .searchbox .addbutton").fadeIn(200);
-
-                $(".header .searcharea .addedEntitiesBox .title").fadeOut(200, function () {
-                    $(".header .searcharea .addedEntitiesBox .title").text("Compare between");
-                    $(".header .searcharea .addedEntitiesBox").fadeIn(200);
-                    $(".header .searcharea .addedEntitiesBox .title").fadeIn(200);
-                });
-            }
-        }
-        else if ($("input[name='option']:checked").val() == 'relate') {
-            if ($(".header .searcharea .addedEntitiesBox .title").html() != "Relate between") {
-                $(".header .searcharea .searchbox .addbutton").fadeIn();
-                $(".header .searcharea .addedEntitiesBox").fadeIn();
-                $(".header .searcharea .addedEntitiesBox .title").fadeOut(200, function () {
-                    $(".header .searcharea .addedEntitiesBox .title").text("Relate between");
-                    $(".header .searcharea .addedEntitiesBox .title").fadeIn(200);
-                });
-            }
-        }
-    });
+    $("input[name='option']").change(addEntitiesBox);
 
     ///<summary> 
     ///changes the opacity if the add button when the main text bow is empty or not
@@ -161,6 +175,12 @@ $(document).ready(function () {
             $(".header .searcharea .searchbox .addbutton").css("opacity", "1");
         }
     });
+
+
+
+
+    $(".header").change(addedNum); //change the co
+
 
 
 
@@ -197,6 +217,7 @@ $(document).ready(function () {
     ///</summary>
 
 
+
     $('.header .searcharea .searchbox .searchinput').bind('keypress', function (e) {                // Enter pressed... do anything here...
         var code = (e.keyCode ? e.keyCode : e.which);
         if (code == 13) {
@@ -212,3 +233,4 @@ $(document).ready(function () {
         }
     });
 });
+

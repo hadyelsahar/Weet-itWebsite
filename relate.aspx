@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="relate.aspx.cs" Inherits="weetit_website.relate" %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -9,11 +10,21 @@
     <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
     <script src="Scripts/UX/Relate.js" type="text/javascript"></script>
+
+    <!-- style sheets -->
     <link href="Styles/RelatePage.css" rel="stylesheet" type="text/css" />
+    <!-- arborJs Library -->
+    <script src="Scripts/ArborJS/arbor.js" type="text/javascript"></script>
+    <script src="Scripts/ArborJS/arbor-tween.js" type="text/javascript"></script>
+    <script src="Scripts/ArborJS/graphics.js" type="text/javascript"></script>
+    <script src="Scripts/ArborJS/Interaction_Driver.js" type="text/javascript"></script>
+    <script src="Scripts/ArborJS/renderer.js" type="text/javascript"></script>
+    <script src="Scripts/ArborJS/ArborJSDriver.js" type="text/javascript"></script>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
-
     <div class="header">
         <div class="topmenu">
             <ul>
@@ -47,58 +58,71 @@
         <div class="clearfix">
         </div>
     </div>
-
-
-
-
-
-
-        <div class="contentwrapper">
+    <div class="contentwrapper">
         <div class="leftcol">
             <p>
             </p>
         </div>
-        <span id="Span1" class="relationBox"  runat="server">
-            <span class="relatedObjects">
-                <table class="relateTable">
-                    <tr>
-                        <td>
-                            <div class="relatedmicro">
-                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                                <p style=" text-align:center;">hany</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="relatedmicro">
-                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                                <p style=" text-align:center;">hany</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="relatedmicro">
-                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                                <p style=" text-align:center;">hany</p>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="relatedmicro">
-                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                                <p style=" text-align:center;">hany</p>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-          </span>
-                    <div class="RelationDiagram">lasdyflkhasdklfjsdh</div>
-          </span>
-
-        <div class="rightcol">
+        <div class="answerbox" >
+        <div id="headerTable" runat="server">
+            <table class="relateTable">
+                <tr>
+                    <td>
+                        <div class="imgcontainer">
+                            <img src="testimg/220px-WikiBex.jpg" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imgcontainer">
+                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imgcontainer">
+                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imgcontainer">
+                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                        </div>
+                    </td> 
+                    <td>
+                        <div class="imgcontainer">
+                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                        </div>
+                    </td> 
+                </tr>
+                <tr>
+                    <td class="title">
+                       hany
+                    </td>
+                    <td class="title"> 
+                        hany
+                    </td>
+                    <td class="title">
+                        hany
+                    </td>
+                    <td class="title">
+                        islam
+                    </td>
+                    <td class="title">
+                        islam
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="RelationDiagram">
+            <span class="subtitle">relation Diagram</span>
+             <canvas id="viewport" width="700px" height="600"></canvas>
+        </div>
+       
+    </div>
+     <div class="rightcol">
             <p>
             </p>
         </div>
     </div>
-
-
     <div class="microProfilesBox">
     </div>
     </form>

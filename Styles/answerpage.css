@@ -13,6 +13,12 @@ img
 {
 }
 
+a 
+{
+    color:#2f6ea4;
+    text-decoration:none;
+}
+
 .title
 {
     font-size: 24px;
@@ -22,7 +28,7 @@ img
 
 .title:hover
 {
-       text-decoration:underline;
+    text-decoration: underline;
 }
 
 .subtitle
@@ -64,11 +70,40 @@ img
     padding: 10px;
 }
 
-.contentwrapper .answerbox .fullprofile .relatedresults img
+.contentwrapper .answerbox .relateTable
 {
-    max-width: 75px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border: 0px;
+        border-spacing:5px;
+}
+
+.contentwrapper .answerbox .relateTable img
+{
+    height:98%;
+    max-width:85px;
+    margin: auto;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.contentwrapper .answerbox .relateTable .imgcontainer
+{
+    height:70px;
+    margin-bottom: 5px;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 1px 1px #adadad;
+    box-shadow: 0px 0px 1px 1px #adadad;
+    background-color: #F3F3F3;
+    padding: 2px;
+}
+
+.contentwrapper .answerbox .relateTable td
+{
+    text-align: center;
+    max-width: 95px;
+    max-height:90px;
+    margin-bottom: 10px;
+    color: #939393;
+    font-size: 12px;
 }
 
 .contentwrapper .answerbox .fullprofile .profiledetails
@@ -115,7 +150,7 @@ img
 }
 .contentwrapper .answerbox .miniprofile .minileft img
 {
-    max-height: 200px;
+    max-height:200px;
     max-width: 200px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -123,11 +158,11 @@ img
 .contentwrapper .answerbox .miniprofile .miniright
 {
     float: left;
-    width: 400px;
+    max-width: 480px;
 }
 .contentwrapper .answerbox .miniprofile .miniright .title
 {
-    display:block;
+    display: block;
     font-size: 20px;
     margin-bottom: 5px;
     padding: 5px;
@@ -154,12 +189,11 @@ contentwrapper .answerbox .miniprofile .minitable
 
 .contentwrapper .answerbox .miniprofile .minitable .property
 {
-        color: #898989;
+    color: #898989;
     font-size: 14px;
     width: 25%;
     vertical-align: text-top;
-
- max-width:150px;
+    max-width: 150px;
 }
 
 .contentwrapper .answerbox .microprofile
@@ -187,7 +221,7 @@ contentwrapper .answerbox .miniprofile .minitable
 }
 .contentwrapper .answerbox .microprofile .right .title
 {
-    display:block;
+    display: block;
     font-size: 20px;
     margin-bottom: 5px;
     padding: 5px;

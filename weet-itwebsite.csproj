@@ -99,6 +99,7 @@
     <Content Include="Styles\comparisonpage.css" />
     <Content Include="Styles\default.css" />
     <Content Include="Styles\Defaultpage.css" />
+    <Content Include="Styles\RelatePage.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="testimg\10 Best Footballers in the FIFA World Cup 2010_01.jpg" />
     <Content Include="testimg\220px-WikiBex.jpg" />

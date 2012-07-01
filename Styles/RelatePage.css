@@ -1,25 +1,84 @@
-﻿.relatedObjects .relateTable .relatedmicro img
+﻿/*
+main background : #F3F3F3; 
+upper bar background : #372B2B; 
+buttons  up : #F1F1F1;
+buttons down : #E2E2E2;
+borders for text input and buttons and search boxes : #DFDFDF ; 
+color 1 : #969696
+color 2 : #
+*/
+.title
 {
-    max-width: 100px;
-    -webkit-border-radius: 10px;
-    border-radius: 15 px;
+    font-size: 24px;
+    color: #372B2B;
+    text-decoration: none;
 }
 
-.relatedObjects .relateTable .relatedmicro p
+.title:hover
 {
-margin-left:auto;
-margin-right:auto;
-
+text-decoration:underline;
 }
 
-.contentwrapper .relationBox
+.subtitle
 {
-    border:1px solid #E2DEDE;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    padding:30px;
-    padding-top:25px;
-    float:left;
-    overflow:hidden;
-    background-color:White;
+    margin-bottom: 10px;
+    color: #939393;
+    font-size: 12px;
 }
+
+.contentwrapper .answerbox .relateTable
+{
+ margin:auto;   
+ border:collapse;
+ margin:auto;
+ margin-bottom:20px;
+}
+
+.contentwrapper .answerbox .relateTable .imgcontainer
+{
+    /*height:70px;
+    width:70px; */
+    margin:auto;
+    -webkit-box-shadow: 0px 0px 1px 1px #adadad;
+    box-shadow: 0px 0px 1px 1px #adadad;
+    background-color:#F3F3F3;
+    padding:3px;
+    margin:10px;
+}
+
+.contentwrapper .answerbox .relateTable img
+{
+    /*max-width: 70px;*/
+
+    max-height:70px;
+    margin: 0 auto;
+}
+
+.contentwrapper .answerbox .relateTable td
+{
+text-align:center;
+max-width:200px;
+margin-bottom: 10px;
+}
+
+.contentwrapper .answerbox .relateTable td a
+{
+    color: #939393;
+    text-decoration:none;
+    font-size: 12px;
+}
+.contentwrapper .answerbox .relateTable td a:hover
+{
+    text-decoration:underline;
+}
+
+
+#viewport
+{
+ -webkit-box-shadow: 0px 0px 1px 1px #adadad;
+    box-shadow: 0px 0px 1px 1px #adadad;
+    background-color:#F3F3F3;
+    padding:3px;
+    margin:10px;   
+}
+
