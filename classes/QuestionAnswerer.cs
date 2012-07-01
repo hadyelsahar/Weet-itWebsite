@@ -46,10 +46,10 @@ namespace weetit_website.classes
                         }
                         else
                         {
-                            List<Profile> microProfile = new List<Profile>();
+                            List<Profile> microProfiles = new List<Profile>();
                             foreach (String answer in answers)
-                                microProfile.Add(profileClient.ConstructProfile(answer, MergedServicechoiceProfile.micro, 7));
-                            KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(qAnswer, microProfile);
+                                microProfiles.Add(profileClient.ConstructProfile(answer, MergedServicechoiceProfile.micro, 7));
+                            KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(qAnswer, microProfiles);
                             output.Add(questionNAnswer);
                         }
                     }
@@ -84,20 +84,21 @@ namespace weetit_website.classes
                 {
                     List<Profile> miniProfiles = new List<Profile>();
                     foreach (String answer in answers)
-                    {
                         miniProfiles.Add(profileClient.ConstructProfile(answer, MergedServicechoiceProfile.mini, 7));
-                        KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(answersForDiffQuestions.ElementAt(answers.IndexOf(answer)), miniProfiles);
+                    if (answersForDiffQuestions.Count > 0)
+                    {
+                        KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(answersForDiffQuestions[0], miniProfiles);
                         output.Add(questionNAnswer);
                     }
-                    
                 }
                 else
                 {
-                    List<Profile> microProfile = new List<Profile>();
+                    List<Profile> microProfiles = new List<Profile>();
                     foreach (String answer in answers)
+                        microProfiles.Add(profileClient.ConstructProfile(answer, MergedServicechoiceProfile.micro, 7));
+                    if (answersForDiffQuestions.Count > 0)
                     {
-                        microProfile.Add(profileClient.ConstructProfile(answer, MergedServicechoiceProfile.micro, 7));
-                        KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(answersForDiffQuestions.ElementAt(answers.IndexOf(answer)), microProfile);
+                        KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(answersForDiffQuestions[0], microProfiles);
                         output.Add(questionNAnswer);
                     }
                 }
