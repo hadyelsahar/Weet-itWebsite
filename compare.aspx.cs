@@ -11,22 +11,16 @@ namespace weetit_website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if there's no query, return the original page (this case should never happen)
             if (Request.QueryString["q"] == null)
                 return;
 
+            //parsing the parameters
             List<string> parsedStringsList = parseString(Request.QueryString["q"].ToString());
-
-            //hardconding for testing 
-            //List<string> parsedStringsList = new List<string>();
-            //parsedStringsList.Add("Egypt");
-            //parsedStringsList.Add("Syria");
-            //parsedStringsList.Add("");
-            //parsedStringsList.Add("ATI_Technologies");
-
 
             //the outputURIs
             List<string> outputURIs = new List<string>();
-
+            
             //using the keyword search to get the URIs
             keywordSearchServiceInterfaceClient kwClient = new keywordSearchServiceInterfaceClient();
             foreach (string item in parsedStringsList)
@@ -65,6 +59,10 @@ namespace weetit_website
                 "</div>" +
                 "<div class=\"window\">" +
                     "<div class=\"datarow\">";
+
+            //this was added to handle the maps if available
+
+
             foreach (MicroProfile item in MicroProfilesList)
             {
                 answerbox.InnerHtml += "<div class=\"datacell\">" +
@@ -74,6 +72,7 @@ namespace weetit_website
                         "</div>";
 
             }
+            
             answerbox.InnerHtml += "</div>" +
                 "</div>" +
                 "<div class=\"clearfix\">" +
@@ -88,6 +87,33 @@ namespace weetit_website
             int numberOfPredicates = comparisonOutput[0].FinalComparisonObject.ToList().Count;
             int numberOfObjects = comparisonOutput.Count;
             //Second the table values
+
+            ////////////////THE MAPS PART///////////
+            if (canViewMap(comparisonOutput))
+            {
+                answerbox.InnerHtml += "<div class=\"comparisonbox\">" +
+                "<div class=\"predicate\">" +
+                    //this returns the predicate of all the tables
+                "Map"+
+                "</div>";
+
+                answerbox.InnerHtml += "<div class=\"window\">" +
+                    "<div class=\"datarow\">";
+                List<string> mapstrings = viewMap(comparisonOutput);
+                foreach (string item in mapstrings)
+                {
+                    answerbox.InnerHtml += "<div class=\"datacell expandablecontent\">";
+                    answerbox.InnerHtml += item;
+                    answerbox.InnerHtml += "</div>";
+
+                }
+                answerbox.InnerHtml += "</div>" +
+                    "</div>" +
+                    "</div>";
+            }
+            ////////////////////////////////////////////////////////
+
+
             for (int i = 0; i < numberOfPredicates; i++)
             {
                 answerbox.InnerHtml += "<div class=\"comparisonbox\">" +
@@ -98,21 +124,36 @@ namespace weetit_website
 
                 answerbox.InnerHtml += "<div class=\"window\">" +
                     "<div class=\"datarow\">";
+                
 
                 for (int j = 0; j < numberOfObjects; j++)
                 {
-                    answerbox.InnerHtml += "<div class=\"datacell\">";
+                    answerbox.InnerHtml += "<div class=\"datacell expandablecontent\">";
                     //should be in a href key and value
                     for (int k = 0; k < comparisonOutput[j].FinalComparisonObject[i].Value.ToList().Count; k++)
                     {
                         //we check if it's a uri or not
                         string uri = comparisonOutput[j].FinalComparisonObject[i].Value[k].Key;
-                        //if (uri.Contains("http://"))
-                        //    answerbox.InnerHtml += "<a href=\"" + uri + ">" + comparisonOutput[j].FinalComparisonObject[i].Value[k].Value + "</a>\n";
-                        //else
-                        answerbox.InnerHtml += comparisonOutput[j].FinalComparisonObject[i].Value[k].Value + "<br/>";
+                        string value = HttpUtility.HtmlDecode(comparisonOutput[j].FinalComparisonObject[i].Value[k].Value);
+                        if (Uri.IsWellFormedUriString(uri, UriKind.Absolute))
+                        {
+                            if (Uri.IsWellFormedUriString(value, UriKind.Absolute))
+                            {
+                                answerbox.InnerHtml += "<a href=\"" + uri + "\">" + value + "</a><br/>";
+                            }
+                            else
+                            {
+                                answerbox.InnerHtml += "<a href=\"answer.aspx?uri=" + uri + "\">" + value + "</a><br/>";
+                            }
 
-                    }
+                        }
+
+                        else
+                        {
+                            answerbox.InnerHtml += value + "<br/>";
+                        }
+
+                    }                    
                     answerbox.InnerHtml += "</div>";
                 }
                 answerbox.InnerHtml += "</div>" +
@@ -120,69 +161,78 @@ namespace weetit_website
                     "</div>";
 
             }
-            //answerbox.InnerHtml += "</div>" +
-            //    "<div class=\"clearfix\">" +
-            //    "</div>" +
-            //"</div>";
-
+          
             answerbox.InnerHtml += "</div>";
 
         }
 
 
+        
         List<string> parseString(string input)
         {
             List<string> parsedStringsList = new List<string>();
-            //parsedStringsList.Add("the dark knight");
-            parsedStringsList.Add("google");
-            //parsedStringsList.Add("apple inc");
-            parsedStringsList.Add("DELL");
-            parsedStringsList.Add("samsung");
+            parsedStringsList = input.Split(',').ToList();
 
-
-            //            return input.Split(' ').ToList();
+            for (int i = 0; i < parsedStringsList.Count; i++)
+            {
+                parsedStringsList[i] = HttpUtility.HtmlDecode(parsedStringsList[i]);
+            }            
             return parsedStringsList;
         }
 
 
-        List<ResourceInformation> preprocessingComparisonObjects(List<ResourceInformation> input)
+        /// <summary>
+        /// returns whether or not these comparison has maps included
+        /// </summary>
+        /// <param name="input">the list of resource information to see</param>
+        /// <returns>true or false</returns>
+        bool canViewMap(List<ResourceInformation> input)
         {
-            //remove label
-            //remove duplicates
-            //remove duplicates of ontology and property 
-            //fix bugs..
-
-            List<ResourceInformation> toReturn = new List<ResourceInformation>();
-            ResourceInformation temp = new ResourceInformation();
-
-
-
-            int numberofPredicates = input[0].FinalComparisonObject.ToList().Count;
-            for (int i = 0; i < input.Count; i++)
+            bool longAvailable=false;
+            bool latAvailable=false;
+            foreach (ResourceInformation item in input)
             {
-                for (int j = 0; j < input[i].FinalComparisonObject.ToList().Count; j++)
+                foreach (var item2 in item.FinalComparisonObject)
                 {
-
-                    for (int k = j + 1; k < input[i].FinalComparisonObject.ToList().Count; k++)
-                    {
-                        if (input[i].FinalComparisonObject.ToList()[j].Key.Value.Equals(input[i].FinalComparisonObject.ToList()[k].Key.Value))
-                        {
-                            input[i].FinalComparisonObject.ToList().RemoveAt(j);
-                        }
-
-                        //    if (input[i].FinalComparisonObject.ToList()[j].Key.Value.Equals(input[k].FinalComparisonObject.ToList()[j].Key.Value))
-                        //    {
-                        //        input[i].FinalComparisonObject.ToList()
-
-                        //    }
-                    }
-
+                    if (item2.Key.Key.Equals("http://www.w3.org/2003/01/geo/wgs84_pos#lat"))
+                        latAvailable = true;
+                    if (item2.Key.Key.Equals("http://www.w3.org/2003/01/geo/wgs84_pos#long"))
+                        longAvailable = true;
                 }
             }
 
+            //if both are available
+            if (longAvailable && latAvailable)
+                return true;
+            else
+                return false;
+        }
 
+        /// <summary>
+        /// to return the view string of the map
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        List<string> viewMap(List<ResourceInformation> input)
+        {
+            List<string> toreturn = new List<string>();
+            //<img src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=200x200&sensor=false">
+            
+            //fetching the string to draw the map from every resource information
+            foreach (ResourceInformation item in input)
+            {
+                string temp = "<img src=\"http://maps.googleapis.com/maps/api/staticmap?center=";
+                temp += item.FinalComparisonObject.ToList().Find(e => e.Key.Key.Equals("http://www.w3.org/2003/01/geo/wgs84_pos#lat")).Value[0].Value.ToString();
+                //temp+=item.FinalComparisonObject.First(e=>e.Key.Key.
+                temp += ",";
+                temp += item.FinalComparisonObject.ToList().Find(e => e.Key.Key.Equals("http://www.w3.org/2003/01/geo/wgs84_pos#long")).Value[0].Value.ToString();
+                temp += "&zoom=10&size=400x400&sensor=false\">";
+                toreturn.Add(temp);
+            }
+            return toreturn;
 
-            return input;
+            
+ 
         }
     }
 }
