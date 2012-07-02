@@ -70,6 +70,7 @@ namespace weetit_website
 
         private String showFullProfile(FullProfile fullProfile)
         {
+            
             String HTML = "";
             String relatedImg = "";
             String relatedName = "";
@@ -88,6 +89,8 @@ namespace weetit_website
                         details += "<div class=\"line\">";
                         if (en.URI != null)
                             details += "<a href=\"answer.aspx?uri=" + en.URI + "\">" + en.Label + "</a>";
+                        else if(en.URI==null &&Uri.IsWellFormedUriString(en.Label,UriKind.Absolute))
+                            details += "<a href=\"" + en.Label + "\">" + en.Label + "</a>";
                         else
                             details += en.Label;
                         details += "</div>";
@@ -162,6 +165,8 @@ namespace weetit_website
                         details += "<div class=\"line\">";
                         if (en.URI != null)
                             details += "<a href=\"answer.aspx?uri=" + en.URI + "\">" + en.Label + "</a>";
+                        else if (en.URI == null && Uri.IsWellFormedUriString(en.Label, UriKind.Absolute))
+                            details += "<a href=\"" + en.Label + "\">" + en.Label + "</a>";
                         else
                             details += en.Label;
                         details+=                "</div>";
@@ -179,7 +184,7 @@ namespace weetit_website
                                 + "<a class=\"title\" href=\"answer.aspx?uri="+miniProfile.URI+"\">" + miniProfile.Label + "</a>"
                             + "</div>"
                         + "<div class=\"abstract\">"
-                            + miniProfile.Abstract
+                            + miniProfile.Abstract+"<a href=\"answer.aspx?uri="+miniProfile.URI+"\">more</a>"
                         + "</div>"
                         + "<div class=\"minitable\">"
                             + "<table class=\"detailstable\">"
@@ -205,7 +210,7 @@ namespace weetit_website
                                             + "<a class=\"title\" href=\"answer.aspx?uri="+microProfile.URI+"\">" + microProfile.Label + "</a>"
                                         + "</div>"
                                         + "<div class=\"abstract\">"
-                                            + microProfile.Abstract
+                                            + microProfile.Abstract+"<a href=\"answer.aspx?uri="+microProfile.URI+"\">more</a>"
                                         + "</div>"
                                     + "</div>"
                                     + "<div class=\"clearfix\">"
