@@ -232,11 +232,11 @@ namespace weetit_website
             String HTML="";
             HTML += "<div class=\"miniprofile literalanswer\">"
                                             + "<div class=\"minileft\">"
-                                                + "<img src=" + literalProfile.imageURI + "/>"
+                                                + "<a href=\"answer.aspx?uri="+literalProfile.subjectURI+"\">"+"<img src=\"" + literalProfile.imageURI + "\"/></>"
                                             + " </div>"
                                             + "<div class=\"miniright\">"
                                                 + " <div>"
-                                                    + "<a class=\"title\" href=\"#\">" + literalProfile.subjectLabel + "</a>"
+                                                    + "<a class=\"title\" href=\"answer.aspx?uri="+literalProfile.subjectURI+"\">" + literalProfile.subjectLabel + "</a>"
                                                 + "</div>"
                                                 + "<div class=\"minitable\">"
                                                     + "<table class=\"detailstable\">"
