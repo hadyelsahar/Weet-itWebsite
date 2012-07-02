@@ -15,3 +15,4 @@ E:\Users\hady\Documents\GitHub\Weet-itWebsite\obj\Debug\weet-itwebsite.dll
 E:\Users\hady\Documents\GitHub\Weet-itWebsite\bin\weet-itwebsite.dll
 E:\Users\hady\Documents\GitHub\Weet-itWebsite\bin\weet-itwebsite.pdb
 E:\Users\hady\Documents\GitHub\Weet-itWebsite\obj\Debug\weet-itwebsite.pdb
+E:\Users\hady\Documents\GitHub\Weet-itWebsite\obj\Debug\weet-itwebsite.csprojResolveAssemblyReference.cache

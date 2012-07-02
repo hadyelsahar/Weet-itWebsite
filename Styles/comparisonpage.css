@@ -1,4 +1,10 @@
-﻿.GalleryButtons
+﻿a 
+{
+    color:#2f6ea4;
+    text-decoration:none;
+}
+
+.GalleryButtons
 {
    position:fixed;
    top:30%;

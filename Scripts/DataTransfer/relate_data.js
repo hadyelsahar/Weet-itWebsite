@@ -14,7 +14,7 @@ function drawDistance(distance) {
             clearInterval(id);
         }
 
-    }, 1000);
+    }, 2000);
 }
 
 function drawnode(x) {
