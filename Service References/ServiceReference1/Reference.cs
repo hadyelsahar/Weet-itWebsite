@@ -596,10 +596,10 @@ namespace weetit_website.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Profile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(weetit_website.ServiceReference1.LiteralProfile))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(weetit_website.ServiceReference1.MicroProfile))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(weetit_website.ServiceReference1.MiniProfile))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(weetit_website.ServiceReference1.FullProfile))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(weetit_website.ServiceReference1.LiteralProfile))]
     public partial class Profile : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -621,93 +621,6 @@ namespace weetit_website.ServiceReference1 {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LiteralProfile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
-    [System.SerializableAttribute()]
-    public partial class LiteralProfile : weetit_website.ServiceReference1.Profile {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PredicateLabelField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string imageURIField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string objectUnitField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string objectValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string subjectLabelField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PredicateLabel {
-            get {
-                return this.PredicateLabelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PredicateLabelField, value) != true)) {
-                    this.PredicateLabelField = value;
-                    this.RaisePropertyChanged("PredicateLabel");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string imageURI {
-            get {
-                return this.imageURIField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.imageURIField, value) != true)) {
-                    this.imageURIField = value;
-                    this.RaisePropertyChanged("imageURI");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string objectUnit {
-            get {
-                return this.objectUnitField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.objectUnitField, value) != true)) {
-                    this.objectUnitField = value;
-                    this.RaisePropertyChanged("objectUnit");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string objectValue {
-            get {
-                return this.objectValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.objectValueField, value) != true)) {
-                    this.objectValueField = value;
-                    this.RaisePropertyChanged("objectValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string subjectLabel {
-            get {
-                return this.subjectLabelField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.subjectLabelField, value) != true)) {
-                    this.subjectLabelField = value;
-                    this.RaisePropertyChanged("subjectLabel");
-                }
             }
         }
     }
@@ -816,7 +729,23 @@ namespace weetit_website.ServiceReference1 {
     public partial class FullProfile : weetit_website.ServiceReference1.MiniProfile {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private weetit_website.ServiceReference1.Location LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private weetit_website.ServiceReference1.Entity[] RelatedField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public weetit_website.ServiceReference1.Location Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public weetit_website.ServiceReference1.Entity[] Related {
@@ -827,6 +756,109 @@ namespace weetit_website.ServiceReference1 {
                 if ((object.ReferenceEquals(this.RelatedField, value) != true)) {
                     this.RelatedField = value;
                     this.RaisePropertyChanged("Related");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LiteralProfile", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
+    [System.SerializableAttribute()]
+    public partial class LiteralProfile : weetit_website.ServiceReference1.Profile {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PredicateLabelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string imageURIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string objectUnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string objectValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string subjectLabelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string subjectURIField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PredicateLabel {
+            get {
+                return this.PredicateLabelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PredicateLabelField, value) != true)) {
+                    this.PredicateLabelField = value;
+                    this.RaisePropertyChanged("PredicateLabel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string imageURI {
+            get {
+                return this.imageURIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.imageURIField, value) != true)) {
+                    this.imageURIField = value;
+                    this.RaisePropertyChanged("imageURI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string objectUnit {
+            get {
+                return this.objectUnitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.objectUnitField, value) != true)) {
+                    this.objectUnitField = value;
+                    this.RaisePropertyChanged("objectUnit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string objectValue {
+            get {
+                return this.objectValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.objectValueField, value) != true)) {
+                    this.objectValueField = value;
+                    this.RaisePropertyChanged("objectValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string subjectLabel {
+            get {
+                return this.subjectLabelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.subjectLabelField, value) != true)) {
+                    this.subjectLabelField = value;
+                    this.RaisePropertyChanged("subjectLabel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string subjectURI {
+            get {
+                return this.subjectURIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.subjectURIField, value) != true)) {
+                    this.subjectURIField = value;
+                    this.RaisePropertyChanged("subjectURI");
                 }
             }
         }
@@ -895,6 +927,67 @@ namespace weetit_website.ServiceReference1 {
                 if ((object.ReferenceEquals(this.URIField, value) != true)) {
                     this.URIField = value;
                     this.RaisePropertyChanged("URI");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://schemas.datacontract.org/2004/07/mergedServices")]
+    [System.SerializableAttribute()]
+    public partial class Location : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LatitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LongitudeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Latitude {
+            get {
+                return this.LatitudeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LatitudeField, value) != true)) {
+                    this.LatitudeField = value;
+                    this.RaisePropertyChanged("Latitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Longitude {
+            get {
+                return this.LongitudeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LongitudeField, value) != true)) {
+                    this.LongitudeField = value;
+                    this.RaisePropertyChanged("Longitude");
                 }
             }
         }
