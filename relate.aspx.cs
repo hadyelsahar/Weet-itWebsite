@@ -85,11 +85,11 @@ namespace weetit_website
 
                 }
                 json = json.Remove(json.Length - 2);
-                json += "],";
+                json += "}],";
 
             }
 
-            json = json.Remove(json.Length - 2) + "]";
+            json = json.Remove(json.Length - 2) + "]]";
 
             return json;
         }

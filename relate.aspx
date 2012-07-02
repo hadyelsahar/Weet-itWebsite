@@ -5,22 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Relate</title>
+      
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
     <script src="Scripts/UX/Relate.js" type="text/javascript"></script>
-
-    <!-- style sheets -->
+    <script src="Scripts/DataTransfer/relate_data.js" type="text/javascript"></script>
     <link href="Styles/RelatePage.css" rel="stylesheet" type="text/css" />
     <!-- arborJs Library -->
     <script src="Scripts/ArborJS/arbor.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/arbor-tween.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/graphics.js" type="text/javascript"></script>
+  
     <script src="Scripts/ArborJS/Interaction_Driver.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/renderer.js" type="text/javascript"></script>
-    <script src="Scripts/ArborJS/ArborJSDriver.js" type="text/javascript"></script>
 
+    <script src="Scripts/ArborJS/ArborJSDriver.js" type="text/javascript"></script>
 
 </head>
 <body>
