@@ -95,10 +95,19 @@ namespace weetit_website
                             details += en.Label;
                         details += "</div>";
                     }
-                    details += "</td>"
-                            + "</tr>";
                 }
             }
+            if (fullProfile.Location.Latitude != null & fullProfile.Location.Longitude != null)
+                details += "<tr>"
+                            + "<td class=\"property\">"
+                                + "map"
+                            + "</td>"
+                            + "<td class=\"value\">"
+                                +"<div class=\"line\">" 
+                                    + "<img src=\"http://maps.googleapis.com/maps/api/staticmap?center=" + fullProfile.Location.Latitude + "," + fullProfile.Location.Longitude + "&zoom=11&size=500x200&sensor=false\" title=\"" + "Latitude= " + fullProfile.Location.Latitude + ", Longitude= " + fullProfile.Location.Longitude + "\">" 
+                                + "</div>";
+            details += "</td>"
+                    + "</tr>";
             foreach (Entity rel in fullProfile.Related.ToList())
                 relatedImg += "<td>"
                                 + "<div class=\"imgcontainer\">"
@@ -109,7 +118,6 @@ namespace weetit_website
                 relatedName += "<td class=\"title\">"
                                 +"<a href=\"answer.aspx?uri="+rel.URI+"\">"+ rel.Label+"</a>"
                             + "</td>";
-
             HTML += "<div class=\"fullprofile\">"
                     + "<div class=\"abstractcontainer\">"
                         + "<div class=\"profilepic\">"
@@ -177,7 +185,7 @@ namespace weetit_website
             }
             HTML += "<div class=\"miniprofile\">"
                         + "<div class=\"minileft\">"
-                            + "<img src=\"" + miniProfile.Picture + "\" />"
+                            + "<a href=\"answer.aspx?uri="+miniProfile.URI+"\"><img src=\"" + miniProfile.Picture + "\" />"+"</a>"
                         + "</div>"
                         + "<div class=\"miniright\">"
                             + "<div>"
@@ -203,7 +211,7 @@ namespace weetit_website
             String HTML = "";
             HTML += "<div class=\"microprofile\">"
                                     + "<div class=\"left\">"
-                                        + "<img src=\"" + microProfile.Picture + "\" />"
+                                        + "<a href=\"answer.aspx?uri=" + microProfile.URI + "\"><img src=\"" + microProfile.Picture + "\" />" + "</a>"
                                     + "</div>"
                                     + "<div class=\"right\">"
                                         + "<div>"
