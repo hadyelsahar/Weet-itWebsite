@@ -30,7 +30,7 @@ namespace weetit_website
                 {
                     List<Profile> profiles = QNProfiles.Value;
                     if (QNProfiles.Key.questiontype == utilquestionTypes.countAnswer)
-                        HTML += "<div>Number of results=" + profiles.Count;
+                        HTML += "<div>Number of results=" + profiles.Count+"</div>";
                     foreach (Profile profile in profiles)
                     {
                         if (profile is FullProfile)
