@@ -1,0 +1,12 @@
+﻿.errorMessageTitle
+{
+     font-size: 88px;
+}
+
+.errorMessage
+{
+    font-size: 42px;
+    text-shadow: 0px 1px 3px #3b3b3b;
+    filter: dropshadow(color=#3b3b3b, offx=0, offy=1);
+    margin:20px;
+}
