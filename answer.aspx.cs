@@ -20,52 +20,64 @@ namespace weetit_website
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            String question = Request.QueryString["q"];
-            String HTML = "";
-            
-            if (question != null)
-            {
-                List<KeyValuePair<questionAnswer,List<Profile>>> QNDiffProfiles = QuestionAnswerer.getAnswersInProfiles(question);
-                foreach (KeyValuePair<questionAnswer,List<Profile>> QNProfiles in QNDiffProfiles)
+            try
+            {   
+                String question = Request.QueryString["q"];
+                String uri = Request.QueryString["uri"];
+                String HTML = "";
+
+                if (question != null && uri == null)
                 {
-                    List<Profile> profiles = QNProfiles.Value;
-                    if (QNProfiles.Key.questiontype == utilquestionTypes.countAnswer)
-                        HTML += "<div>Number of results=" + profiles.Count+"</div>";
-                    foreach (Profile profile in profiles)
+                    List<KeyValuePair<questionAnswer, List<Profile>>> QNDiffProfiles = QuestionAnswerer.getAnswersInProfiles(question);
+                    if (QNDiffProfiles.Count == 0)
+                        HTML += "<div> No results found </div>";
+                    foreach (KeyValuePair<questionAnswer, List<Profile>> QNProfiles in QNDiffProfiles)
                     {
-                        if (profile is FullProfile)
+                        List<Profile> profiles = QNProfiles.Value;
+                        if (QNProfiles.Key.questiontype == utilquestionTypes.countAnswer)
+                            HTML += "<div>Number of results=" + profiles.Count + "</div>";
+                        foreach (Profile profile in profiles)
                         {
-                            FullProfile fullProfile = (FullProfile)profile;
-                            HTML+=showFullProfile(fullProfile);
-                        }
-                            
-                        else if (profile is MiniProfile)
-                        {
-                            MiniProfile miniProfile = (MiniProfile)profile;
-                            HTML+= showMiniProfie(miniProfile);
-                            
-                        }
-                        else if (profile is MicroProfile)
-                        {
-                            MicroProfile microProfile = (MicroProfile)profile;
-                            HTML+= showMicroProfile(microProfile);
-                        }
-                        else if (profile is LiteralProfile)
-                        {
-                            LiteralProfile LP = (LiteralProfile)profile;
-                            HTML += showLiteralProfile(LP);
+                            if (profile is FullProfile)
+                            {
+                                FullProfile fullProfile = (FullProfile)profile;
+                                HTML += showFullProfile(fullProfile);
+                            }
+
+                            else if (profile is MiniProfile)
+                            {
+                                MiniProfile miniProfile = (MiniProfile)profile;
+                                HTML += showMiniProfie(miniProfile);
+
+                            }
+                            else if (profile is MicroProfile)
+                            {
+                                MicroProfile microProfile = (MicroProfile)profile;
+                                HTML += showMicroProfile(microProfile);
+                            }
+                            else if (profile is LiteralProfile)
+                            {
+                                LiteralProfile LP = (LiteralProfile)profile;
+                                HTML += showLiteralProfile(LP);
+                            }
                         }
                     }
                 }
+                else if (uri != null && question == null)
+                {
+                    ProfileConstructorInterfaceClient PCIClient = new ProfileConstructorInterfaceClient();
+                    FullProfile fullProfile = (FullProfile)PCIClient.ConstructProfile(uri, MergedServicechoiceProfile.full, 50);
+                    HTML = showFullProfile(fullProfile);
+                }
+                else
+                    Response.Redirect("error.aspx");
+                answerbox.InnerHtml = HTML;
             }
-            String uri = Request.QueryString["uri"];
-            if (uri != null)
+            catch (Exception exep)
             {
-                ProfileConstructorInterfaceClient PCIClient = new ProfileConstructorInterfaceClient();
-                FullProfile fullProfile=(FullProfile)PCIClient.ConstructProfile(uri, MergedServicechoiceProfile.full, 50);
-                HTML = showFullProfile(fullProfile);
+                Util.log(exep.Message);
+                Response.Redirect("error.aspx");
             }
-            answerbox.InnerHtml = HTML;
         }
 
         private String showFullProfile(FullProfile fullProfile)
@@ -83,7 +95,7 @@ namespace weetit_website
                             + "<td class=\"property\">"
                                 + key.Key
                             + "</td>"
-                            + "<td class=\"value\">";
+                            + "<td class=\"value expandableContent\">";
                     foreach (Entity en in key.Value)
                     {
                         details += "<div class=\"line\">";
@@ -125,7 +137,7 @@ namespace weetit_website
                         + "</div>"
                         + "<div class=\"abstract\">"
                             + "<a href=\"answer.aspx?uri="+fullProfile.URI+"\" class=\"title\">" + fullProfile.Label + "</a>"
-                            + "<p class=\"abstracttext\">"
+                            + "<p class=\"abstracttext expandableContent\">"
                                 + fullProfile.Abstract
                             + "</p>"
                         + "</div>"
@@ -167,7 +179,7 @@ namespace weetit_website
                             + "<td class=\"property\">"
                                 + key.Key
                             + "</td>"
-                            + "<td class=\"value\">";
+                            + "<td class=\"value expandableContent\">";
                     foreach (Entity en in key.Value)
                     {
                         details += "<div class=\"line\">";
@@ -191,7 +203,7 @@ namespace weetit_website
                             + "<div>"
                                 + "<a class=\"title\" href=\"answer.aspx?uri="+miniProfile.URI+"\">" + miniProfile.Label + "</a>"
                             + "</div>"
-                        + "<div class=\"abstract\">"
+                        + "<div class=\"abstract expandableContent\">"
                             + miniProfile.Abstract;
             if (miniProfile.IsShortAbstract)
                 HTML += "<a href=\"answer.aspx?uri=" + miniProfile.URI + "\">more</a>";
@@ -219,7 +231,7 @@ namespace weetit_website
                                         + "<div>"
                                             + "<a class=\"title\" href=\"answer.aspx?uri="+microProfile.URI+"\">" + microProfile.Label + "</a>"
                                         + "</div>"
-                                        + "<div class=\"abstract\">"
+                                        + "<div class=\"abstract expandableContent\">"
                                             + microProfile.Abstract;
             if (microProfile.IsShortAbstract)
                 HTML += "<a href=\"answer.aspx?uri=" + microProfile.URI + "\">more</a>";
