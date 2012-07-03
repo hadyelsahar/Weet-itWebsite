@@ -220,12 +220,14 @@ namespace weetit_website
                                             + "<a class=\"title\" href=\"answer.aspx?uri="+microProfile.URI+"\">" + microProfile.Label + "</a>"
                                         + "</div>"
                                         + "<div class=\"abstract\">"
-                                            + microProfile.Abstract+"<a href=\"answer.aspx?uri="+microProfile.URI+"\">more</a>"
-                                        + "</div>"
-                                    + "</div>"
-                                    + "<div class=\"clearfix\">"
-                                    + "</div>"
-                                + "</div>";
+                                            + microProfile.Abstract;
+            if (microProfile.IsShortAbstract)
+                HTML += "<a href=\"answer.aspx?uri=" + microProfile.URI + "\">more</a>";
+                                         HTML+= "</div>"
+                                     + "</div>"
+                                     + "<div class=\"clearfix\">"
+                                     + "</div>"
+                                 + "</div>";
             return HTML;
         }
 
