@@ -9,6 +9,7 @@ text middle color:#372B2B;
 subtitle:color:#969696;
 
 */
+
 img
 {
 }
@@ -128,7 +129,6 @@ a
     color: #898989;
     font-size: 14px;
     width: 25%;
-    vertical-align: text-top;
 }
 
 .contentwrapper .answerbox .fullprofile .profiledetails .value
@@ -150,15 +150,15 @@ a
 }
 .contentwrapper .answerbox .miniprofile .minileft img
 {
-    max-height:200px;
-    max-width: 200px;
+    
+    width: 80px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
 }
 .contentwrapper .answerbox .miniprofile .miniright
 {
     float: left;
-    max-width: 480px;
+    max-width: 500px;
 }
 .contentwrapper .answerbox .miniprofile .miniright .title
 {
@@ -178,7 +178,7 @@ a
 }
 contentwrapper .answerbox .miniprofile .minitable
 {
-    border-collapse: collapse;
+    border-collapse: collapse;s
 }
 .contentwrapper .answerbox .miniprofile .minitable td
 {
@@ -209,15 +209,15 @@ contentwrapper .answerbox .miniprofile .minitable
 }
 .contentwrapper .answerbox .microprofile .left img
 {
-    max-height: 100px;
-    max-width: 100px;
+   /* max-height: 100px;*/
+    width: 80px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
 }
 .contentwrapper .answerbox .microprofile .right
 {
     float: left;
-    width: 400px;
+    width: 500px;
 }
 .contentwrapper .answerbox .microprofile .right .title
 {
