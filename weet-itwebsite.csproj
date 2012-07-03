@@ -166,6 +166,7 @@
     </Compile>
     <Compile Include="classes\QuestionAnswerer.cs" />
     <Compile Include="classes\questionClassifier.cs" />
+    <Compile Include="classes\Util.cs" />
     <Compile Include="compare.aspx.cs">
       <DependentUpon>compare.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
