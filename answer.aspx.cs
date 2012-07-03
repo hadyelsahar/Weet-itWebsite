@@ -192,17 +192,19 @@ namespace weetit_website
                                 + "<a class=\"title\" href=\"answer.aspx?uri="+miniProfile.URI+"\">" + miniProfile.Label + "</a>"
                             + "</div>"
                         + "<div class=\"abstract\">"
-                            + miniProfile.Abstract+"<a href=\"answer.aspx?uri="+miniProfile.URI+"\">more</a>"
-                        + "</div>"
-                        + "<div class=\"minitable\">"
-                            + "<table class=\"detailstable\">"
-                                + details
-                            + "</table>"
-                        + "</div>"
-                    + "</div>"
-                    + "<div class=\"clearfix\">"
-                    + "</div>"
-                + "</div>";
+                            + miniProfile.Abstract;
+            if (miniProfile.IsShortAbstract)
+                HTML += "<a href=\"answer.aspx?uri=" + miniProfile.URI + "\">more</a>";
+                         HTML+= "</div>"
+                         + "<div class=\"minitable\">"
+                             + "<table class=\"detailstable\">"
+                                 + details
+                             + "</table>"
+                         + "</div>"
+                     + "</div>"
+                     + "<div class=\"clearfix\">"
+                     + "</div>"
+                 + "</div>";
             return HTML;
         }
 
