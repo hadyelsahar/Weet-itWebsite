@@ -1,4 +1,11 @@
-﻿ body 
+﻿ .expand
+ {
+     position:absolute;
+     top:5px;
+     left:5px;
+ }
+ 
+ body 
 {
     font-family:arial ,Sans-Serif;
     background-color:#F0F0F0;
