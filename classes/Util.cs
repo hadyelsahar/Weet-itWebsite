@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.IO;
 
-namespace weetit_website.classes
+namespace weetit_website
 {
     public class Util
     {
@@ -13,7 +13,7 @@ namespace weetit_website.classes
 
             try
             {
-                StreamWriter logWriter = File.AppendText(@".\Log.txt");
+                StreamWriter logWriter = new StreamWriter(@".\Log.txt", true);// File.AppendText(@".\Log.txt");
                 logWriter.Write(s + "\t" + DateTime.Now.ToLongTimeString().ToString() + "\n");
                 logWriter.Close();
             }

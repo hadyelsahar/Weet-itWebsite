@@ -186,6 +186,7 @@ namespace weetit_website
             {
 
                 //logging should go here
+                Util.log("Comparison>> Message: " + c.Message + " Data: " + c.Data);
                 Response.Redirect("error.aspx", false);
 
             }
