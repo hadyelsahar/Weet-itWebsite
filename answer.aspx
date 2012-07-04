@@ -1,16 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="answer.aspx.cs" Inherits="weetit_website.answer" %>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>answer</title>
+    <!-- style sheets -->
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <link href="Styles/answerpage.css" rel="stylesheet" type="text/css" />
+
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/UX/compare.js" type="text/javascript"></script>
     <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
     <script src="Scripts/UX/defaultpage.js" type="text/javascript"></script>
+    <!-- tabify for tabs -->
+    <script src="Scripts/tabify/jquery.tabify.js" type="text/javascript"></script>
+    <script src="Scripts/UX/answer.js" type="text/javascript"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -53,6 +58,15 @@
             </p>
         </div>
         <div class="answerbox" id="answerbox" runat="server">
+
+            <ul id="menu" class="menu">
+                <li class="active"><a href="#childrenofmubarak">children of mubarak</a></li>
+                <li><a href="#miniprofile">mini profile</a></li>
+                <li><a href="#microprofile">microprofile</a></li>
+                <li><a href="#miniprofileliteralanswer">mini profile with literal answer</a></li>
+            </ul>
+
+            <div id="childrenofmubarak">
             <div class="fullprofile">
                 <div class="abstractcontainer">
                     <div class="profilepic">
@@ -240,7 +254,9 @@
                     </table>
                 </div>
             </div>
-            <div class="miniprofile">
+            </div>
+
+            <div id="miniprofile" class="miniprofile">
                 <div class="minileft">
                     <img src="852221_f496.jpg" />
                 </div>
@@ -285,7 +301,7 @@
                 <div class="clearfix">
                 </div>
             </div>
-            <div class="microprofile">
+            <div id="microprofile" class="microprofile">
                 <div class="left">
                     <img src="852221_f496.jpg" />
                 </div>
@@ -302,7 +318,7 @@
                 <div class="clearfix">
                 </div>
             </div>
-            <div class="miniprofile literalanswer">
+            <div id="miniprofileliteralanswer" class="miniprofile literalanswer">
                 <div class="minileft">
                     <img src="852221_f496.jpg" />
                 </div>

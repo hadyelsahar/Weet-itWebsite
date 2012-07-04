@@ -1,17 +1,56 @@
 ﻿/*
 colors
-
 upperBar color:#372B2B; 
 main background:#F3F3F3; 
 light border:#DFDFDF ;
 Text Title color:#372B2B ;
 text middle color:#372B2B;
 subtitle:color:#969696;
-
 */
+
+.menu  
+{
+    padding: 0; 
+    clear: both; 
+}
+
+.menu li  
+{
+    display: inline; 
+}
+
+.menu li a  
+{
+    background: #ccf; 
+    padding: 10px; 
+    border-bottom: none; 
+    text-decoration: none; 
+    color: white; 
+    background-color:#372b2b;
+    font-weight: bold;
+}
+
+.menu li.active a  
+{
+    color:#000;
+    background:#ffffff; 
+}
+
+.content  
+{
+    float: left; 
+    clear: both; 
+    border: 1px solid #ccf; 
+    border-top: none; 
+    border-left: none; 
+    background: #eef; 
+    padding: 10px 20px 20px; 
+    width: 400px; 
+}
 
 img
 {
+    
 }
 
 a 
