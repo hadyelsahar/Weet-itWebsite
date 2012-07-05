@@ -34,7 +34,7 @@ namespace weetit_website.classes
                             if (answers.Count == 1)
                             {
                                 List<Profile> fullProfile = new List<Profile>();
-                                fullProfile.Add(profileClient.ConstructProfile(answers[0], MergedServicechoiceProfile.full, 15));
+                                fullProfile.Add(profileClient.ConstructProfile(answers[0], MergedServicechoiceProfile.full, 200));
                                 KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(qAnswer, fullProfile);
                                 output.Add(questionNAnswer);
                             }
@@ -78,7 +78,7 @@ namespace weetit_website.classes
                     if (answers.Count == 1)
                     {
                         List<Profile> fullProfile = new List<Profile>();
-                        fullProfile.Add(profileClient.ConstructProfile(answers[0], MergedServicechoiceProfile.full, 15));
+                        fullProfile.Add(profileClient.ConstructProfile(answers[0], MergedServicechoiceProfile.full, 200));
                         KeyValuePair<questionAnswer, List<Profile>> questionNAnswer = new KeyValuePair<questionAnswer, List<Profile>>(answersForDiffQuestions[0], fullProfile);
                         output.Add(questionNAnswer);
                     }

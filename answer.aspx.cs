@@ -56,6 +56,9 @@ namespace weetit_website
                             HTML += "<div id=\"tab" + QNDiffProfiles.IndexOf(QNProfiles) + "\">";
                         else
                             HTML += "<div>";
+                        if(QNProfiles.Key.predicateLabelList.Keys.ToList().Count>0 && QNProfiles.Key.subjectLabelList.Keys.ToList().Count>0)
+                            HTML += "<div>" + QNProfiles.Key.predicateLabelList.Keys.ToList()[0] + " of " + "<a href=\"answer.aspx?uri=" + QNProfiles.Key.subjectUriList.Keys.ToList()[0] + "\">" + QNProfiles.Key.subjectLabelList.Keys.ToList()[0] + "</a>" + "</div>";
+
                         foreach (Profile profile in profiles)
                         {
                             if (profile is FullProfile)
