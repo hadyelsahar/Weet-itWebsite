@@ -8,7 +8,6 @@ text middle color:#372B2B;
 subtitle:color:#969696;
 */
 
-
 .menu  
 {
     padding: 0; 
@@ -103,6 +102,7 @@ a
 .contentwrapper .answerbox .fullprofile .abstract
 {
     color: #372B2B;
+    position:relative;
 }
 
 .contentwrapper .answerbox .fullprofile .relatedresults
@@ -160,7 +160,8 @@ a
 .contentwrapper .answerbox .fullprofile .profiledetails .detailstable td
 {
     border: 0px;
-    padding: 5px;
+    padding:5px;
+    padding-left: 20px;
     border-bottom: 1px dashed #DFDFDF;
 }
 
@@ -175,6 +176,7 @@ a
 {
     width: 75%;
     vertical-align: text-top;
+    position:relative;
 }
 
 .contentwrapper .answerbox .miniprofile
@@ -274,3 +276,10 @@ contentwrapper .answerbox .miniprofile .minitable
     margin-bottom: 5px;
     padding: 10px;
 }
+
+ .expand
+ {
+     position:absolute;
+     left:0px;
+     top:5px;
+ }

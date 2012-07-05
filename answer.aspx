@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>answer</title>
+     <title>answer</title>
     <!-- style sheets -->
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <link href="Styles/answerpage.css" rel="stylesheet" type="text/css" />
@@ -15,6 +15,8 @@
     <!-- tabify for tabs -->
     <script src="Scripts/tabify/jquery.tabify.js" type="text/javascript"></script>
     <script src="Scripts/UX/answer.js" type="text/javascript"></script>
+    <!-- expandable objects -->
+    <script src="Scripts/UX/answer_expandableContent.js" type="text/javascript"></script>
 
 </head>
 <body>
