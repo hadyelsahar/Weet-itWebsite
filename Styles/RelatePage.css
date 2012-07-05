@@ -82,3 +82,17 @@ margin-bottom: 10px;
     margin:10px;   
 }
 
+.playandpause
+{
+    background-color:Black;
+}
+    
+.playButton
+{
+    background-image: url('../img/add.png');
+
+    width:47px;
+    height:51px;
+    background-repeat: no-repeat;
+    display:block;
+}

@@ -47,8 +47,9 @@
                     <input type="radio" name="option" value="relate" id="relate" /><label for="relate">Relate</label></span>
             </div>
             <div class="searchbox">
-                <input type="text" class="searchinput" /><a href="#" class="button addbutton"></a><a
-                    href="#" class="button searchbutton"></a>
+                <input type="text" class="searchinput" />
+                <a href="#" class="button addbutton"></a>
+                <a href="#" class="button searchbutton"></a>
             </div>
             <div class="clearfix">
             </div>
@@ -116,6 +117,8 @@
             <div class="RelationDiagram">
             <span class="subtitle">relation Diagram</span>
              <canvas id="viewport" width="700px" height="600"></canvas>
+             <a href="#" class="playButton" onclick="playandpause(); return false;"></a>
+             <img src="img/ajax-loader.gif" class="loading" />      
         </div>
        
     </div>
