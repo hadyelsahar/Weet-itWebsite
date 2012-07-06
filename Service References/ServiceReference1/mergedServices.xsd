@@ -104,25 +104,12 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="Profile" nillable="true" type="tns:Profile" />
-  <xs:complexType name="LiteralProfile">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:Profile">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="PredicateLabel" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="imageURI" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="objectUnit" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="subjectLabel" nillable="true" type="xs:string" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="LiteralProfile" nillable="true" type="tns:LiteralProfile" />
   <xs:complexType name="MicroProfile">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:Profile">
         <xs:sequence>
           <xs:element minOccurs="0" name="Abstract" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsShortAbstract" type="xs:boolean" />
           <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="URI" nillable="true" type="xs:string" />
@@ -159,10 +146,33 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:MiniProfile">
         <xs:sequence>
+          <xs:element minOccurs="0" name="Location" nillable="true" type="tns:Location" />
           <xs:element minOccurs="0" name="Related" nillable="true" type="tns:ArrayOfEntity" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="FullProfile" nillable="true" type="tns:FullProfile" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="LiteralProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Profile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PredicateLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="imageURI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objectUnit" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="subjectLabel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="subjectURI" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LiteralProfile" nillable="true" type="tns:LiteralProfile" />
 </xs:schema>

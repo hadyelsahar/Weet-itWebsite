@@ -20,8 +20,9 @@
     background-image:url('/img/leftarrow.png');
     border:0px;
     background-repeat:no-repeat;
-    width:45px;
-    height:58px;
+    width:60px;
+    height:77px;
+     opacity:0.4; 
 }
 
 .GalleryButtons .rightbutton
@@ -31,10 +32,16 @@
     right:-60px;
     background-image:url('/img/rightarrow.png');
     background-repeat:no-repeat;
-    width:45px;
-    height:58px;
-    
+    width:60px;
+    height:77px;
+    opacity:0.4;    
 }
+
+.GalleryButtons .rightbutton:hover , .GalleryButtons .leftbutton:hover
+{
+ opacity :1;   
+}
+
 
 .contentwrapper .answerbox .comparisonbox
 {

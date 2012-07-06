@@ -60,6 +60,7 @@
     <Content Include="answer.aspx" />
     <Content Include="compare.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="error.aspx" />
     <Content Include="files\ComparissonRegularExpression.txt" />
     <Content Include="files\RelateRegularExpression.txt" />
     <Content Include="files\RemoveRegularExpression.txt" />
@@ -121,7 +122,7 @@
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.questionAnswer.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.Relation1.datasource">
+    <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.Relation.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\weetit_website.ServiceReference1.ResourceInformation.datasource">
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
