@@ -271,6 +271,8 @@ namespace weetit_website
             excludedURIs.Add("http://www.w3.org/2003/01/geo/wgs84_pos#long");
             excludedURIs.Add("http://www.w3.org/2003/01/geo/wgs84_pos#lat");
             excludedURIs.Add("http://www.w3.org/2003/01/geo/wgs84_pos#point");
+            excludedURIs.Add("http://xmlns.com/foaf/0.1/name");
+            excludedURIs.Add("http://www.w3.org/2000/01/rdf-schema#label");
 
             return excludedURIs.Contains(input);
  
