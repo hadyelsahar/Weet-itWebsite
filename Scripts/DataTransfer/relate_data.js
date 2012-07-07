@@ -22,14 +22,16 @@ function drawDistance(distance,relation) {
 function playandpause() {
     if (play == 1) {
         play = 0;
-        $(".playButton").css("background-image", "url('../../img/closeIcon.png')");
+        $(".playButton").css("background-image", "url('../img/playIcon.png')");
+        $(".loading").stop();
         $(".loading").fadeOut();
 
     }
 
     else {
         play = 1;
-        $(".playButton").css("background-image", "url('../img/add.png')");
+        $(".playButton").css("background-image", "url('../img/pauseIcon.png')");
+        $(".loading").stop();
         $(".loading").fadeIn();
 
     }

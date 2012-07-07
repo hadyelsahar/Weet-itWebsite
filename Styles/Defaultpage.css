@@ -248,7 +248,7 @@ border-left:1px solid;
 {
     background:#F0F0F0;
     float:left;
-    width:200px;
+    width:150px;
     margin:0px;
     padding:0px;
     overflow:hidden;
@@ -259,7 +259,7 @@ border-left:1px solid;
     -webkit-border-radius: 10px;
 border-radius: 10px;
     padding:30px;
-    width:700px;
+    width:750px;
     padding-top:25px;
     float:left;
     overflow:hidden;

@@ -1,11 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="relate.aspx.cs" Inherits="weetit_website.relate" %>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Relate</title>
-      
     <link href="Styles/Defaultpage.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
     <script src="Scripts/DataTransfer/default_data.js" type="text/javascript"></script>
@@ -17,12 +15,9 @@
     <script src="Scripts/ArborJS/arbor.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/arbor-tween.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/graphics.js" type="text/javascript"></script>
-  
     <script src="Scripts/ArborJS/Interaction_Driver.js" type="text/javascript"></script>
     <script src="Scripts/ArborJS/renderer.js" type="text/javascript"></script>
-
     <script src="Scripts/ArborJS/ArborJSDriver.js" type="text/javascript"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -48,8 +43,8 @@
             </div>
             <div class="searchbox">
                 <input type="text" class="searchinput" />
-                <a href="#" class="button addbutton"></a>
-                <a href="#" class="button searchbutton"></a>
+                <a href="#" class="button addbutton"></a><a href="#" class="button searchbutton">
+                </a>
             </div>
             <div class="clearfix">
             </div>
@@ -65,64 +60,65 @@
             <p>
             </p>
         </div>
-        <div class="answerbox" >
-        <div id="headerTable" runat="server">
-            <table class="relateTable">
-                <tr>
-                    <td>
-                        <div class="imgcontainer">
-                            <img src="testimg/220px-WikiBex.jpg" />
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgcontainer">
-                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgcontainer">
-                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                        </div>
-                    </td>
-                    <td>
-                        <div class="imgcontainer">
-                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                        </div>
-                    </td> 
-                    <td>
-                        <div class="imgcontainer">
-                            <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
-                        </div>
-                    </td> 
-                </tr>
-                <tr>
-                    <td class="title">
-                       hany
-                    </td>
-                    <td class="title"> 
-                        hany
-                    </td>
-                    <td class="title">
-                        hany
-                    </td>
-                    <td class="title">
-                        islam
-                    </td>
-                    <td class="title">
-                        islam
-                    </td>
-                </tr>
-            </table>
+        <div class="answerbox">
+            <div id="headerTable" runat="server">
+                <table class="relateTable">
+                    <tr>
+                        <td>
+                            <div class="imgcontainer">
+                                <img src="testimg/220px-WikiBex.jpg" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="imgcontainer">
+                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="imgcontainer">
+                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="imgcontainer">
+                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="imgcontainer">
+                                <img src="testimg/10%20Best%20Footballers%20in%20the%20FIFA%20World%20Cup%202010_01.jpg" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="title">
+                            hany
+                        </td>
+                        <td class="title">
+                            hany
+                        </td>
+                        <td class="title">
+                            hany
+                        </td>
+                        <td class="title">
+                            islam
+                        </td>
+                        <td class="title">
+                            islam
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="RelationDiagram">
-            <span class="subtitle">relation Diagram</span>
-             <canvas id="viewport" width="700px" height="600"></canvas>
-             <a href="#" class="playButton" onclick="playandpause(); return false;"></a>
-             <img src="img/ajax-loader.gif" class="loading" />      
+                <span class="subtitle">relation Diagram</span>
+                <div class="canvascontainer">
+                    <canvas id="viewport" width="740px" height="600"></canvas>
+                    <a href="#" class="playButton" onclick="playandpause(); return false;"></a>
+                    <img  class="loading" src="img/ajaxloader.gif"  />
+                </div>
+            </div>
         </div>
-       
-    </div>
-     <div class="rightcol">
+        <div class="rightcol">
             <p>
             </p>
         </div>

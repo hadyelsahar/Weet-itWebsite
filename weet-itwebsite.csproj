@@ -71,11 +71,14 @@
     <Content Include="img\add.png" />
     <Content Include="img\add_clicked.png" />
     <Content Include="img\add_hover.png" />
+    <Content Include="img\ajaxloader.gif" />
     <Content Include="img\closeIcon.png" />
     <Content Include="img\closeIconHover.png" />
     <Content Include="img\leftarrow.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\logo2.png" />
+    <Content Include="img\pauseIcon.png" />
+    <Content Include="img\playIcon.png" />
     <Content Include="img\rightarrow.png" />
     <Content Include="img\sb.png" />
     <Content Include="img\sb_clicked.png" />
@@ -83,11 +86,15 @@
     <Content Include="img\_46571386_ac_0003130_d_0.jpg" />
     <Content Include="relate.aspx" />
     <Content Include="Scripts\DataTransfer\default_data.js" />
+    <Content Include="Scripts\DataTransfer\relate_data.js" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\UX\answer.js" />
+    <Content Include="Scripts\UX\answer_expandableContent.js" />
     <Content Include="Scripts\UX\compare.js" />
+    <Content Include="Scripts\UX\compare_expandableContent.js" />
     <Content Include="Scripts\UX\default.js" />
     <Content Include="Scripts\UX\defaultpage.js" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
@@ -96,6 +103,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\UX\expandableContent.js" />
+    <Content Include="Scripts\UX\Relate.js" />
     <Content Include="Styles\answerpage.css" />
     <Content Include="Styles\comparisonpage.css" />
     <Content Include="Styles\default.css" />
