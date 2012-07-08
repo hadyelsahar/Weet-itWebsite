@@ -60,7 +60,7 @@
             <p>
             </p>
         </div>
-        <div class="answerbox">
+        <div class="answerbox" runat="server" id="answerbox">
             <div id="headerTable" runat="server">
                 <table class="relateTable">
                     <tr>

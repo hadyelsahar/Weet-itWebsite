@@ -27,41 +27,58 @@ namespace weetit_website
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["q"] != null)
+            try
             {
-                List<string> inputKeyWords = parseString(Request.QueryString["q"].ToString());
-                List<string> inputKeyWordsURI = new List<string>();
-                List<string> microHtmlPic = new List<string>();
-                List<string> microHtmlLabel = new List<string>();
-                string HTML;
-                keywordSearchServiceInterfaceClient keyWordsClient = new keywordSearchServiceInterfaceClient();
 
-                foreach (string keyword in inputKeyWords)
+                if (Request.QueryString["q"] != null)
                 {
-                    inputKeyWordsURI.Add(keyWordsClient.geturi_bestMatch(keyword));
-                }
+                    List<string> inputKeyWords = parseString(Request.QueryString["q"].ToString());
+                    List<string> inputKeyWordsURI = new List<string>();
+                    List<string> microHtmlPic = new List<string>();
+                    List<string> microHtmlLabel = new List<string>();
+                    string HTML;
+                    keywordSearchServiceInterfaceClient keyWordsClient = new keywordSearchServiceInterfaceClient();
 
-                ProfileConstructorInterfaceClient profileClient = new ProfileConstructorInterfaceClient();
-                List<MicroProfile> profiles = new List<MicroProfile>();
-                foreach (string keyword in inputKeyWordsURI)
-                {
-                    profiles.Add((MicroProfile)profileClient.ConstructProfile(keyword, MergedServicechoiceProfile.micro, 1));
-                }
+                    foreach (string keyword in inputKeyWords)
+                    {
+                        inputKeyWordsURI.Add(keyWordsClient.geturi_bestMatch(keyword));
+                    }
 
-                List<string> htmlTable = new List<string>();//<tr><td><div class="imgcontainer"><img src="testimg/220px-WikiBex.jpg" /></div></td></tr><tr><td class="title">hany</td></tr>
-                HTML = "<table class=\"relateTable\"><tr>";
-                foreach (MicroProfile microProfile in profiles)
-                {
-                    HTML += "<td><div class=\"imgcontainer\"><a href=\"answer.aspx?uri=" + microProfile.URI + "\"><img src=\"" + microProfile.Picture + "\" /></a></div></td>";
+                    ProfileConstructorInterfaceClient profileClient = new ProfileConstructorInterfaceClient();
+                    List<MicroProfile> profiles = new List<MicroProfile>();
+                    foreach (string keyword in inputKeyWordsURI)
+                    {
+                        profiles.Add((MicroProfile)profileClient.ConstructProfile(keyword, MergedServicechoiceProfile.micro, 1));
+                    }
+
+                    List<string> htmlTable = new List<string>();//<tr><td><div class="imgcontainer"><img src="testimg/220px-WikiBex.jpg" /></div></td></tr><tr><td class="title">hany</td></tr>
+                    HTML = "<table class=\"relateTable\"><tr>";
+                    foreach (MicroProfile microProfile in profiles)
+                    {
+                        HTML += "<td><div class=\"imgcontainer\"><a href=\"answer.aspx?uri=" + microProfile.URI + "\"><img src=\"" + microProfile.Picture + "\" /></a></div></td>";
+                    }
+                    HTML += "</tr><tr>";
+                    foreach (MicroProfile microProfile in profiles)
+                    {
+                        HTML += "<td class=\"title\"><a href=\"answer.aspx?uri=" + microProfile.URI + "\">" + microProfile.Label + "</a></td>";
+                    }
+                    HTML += "</tr></table>";
+                    HTML += "<script>var mainNodes = \"" + string.Join(",", inputKeyWordsURI.ToArray()) + "\"; </script>";
+                    headerTable.InnerHtml = HTML;
                 }
-                HTML += "</tr><tr>";
-                foreach (MicroProfile microProfile in profiles)
+                //if nothing is sent in q parameter
+                else
                 {
-                    HTML += "<td class=\"title\"><a href=\"answer.aspx?uri=" + microProfile.URI + "\">" + microProfile.Label + "</a></td>";
+                    //headerTable.InnerHtml = "<h2>There were no parameters to relate between</h2>"; 
+                    answerbox.InnerHtml = "<h2>There were no parameters to relate between.....</h2>";
+
                 }
-                HTML += "</tr></table>";
-                HTML += "<script>var mainNodes = \"" + string.Join(",", inputKeyWordsURI.ToArray()) + "\"; </script>";
-                headerTable.InnerHtml = HTML;
+            }
+            catch (Exception c)
+            {
+                Util.log("RELATION ERROR" + c.Message);
+                Response.Redirect("error.aspx");
+                
             }
         }
 
