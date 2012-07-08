@@ -16,7 +16,8 @@ subtitle:color:#969696;
 
 .menu li  
 {
-    display: inline; 
+    display: inline-block; 
+    margin:2px;
 }
 
 .menu li a  
@@ -28,6 +29,7 @@ subtitle:color:#969696;
     color: white; 
     background-color:#372b2b;
     font-weight: bold;
+    display:block;
 }
 
 .menu li.active a  
