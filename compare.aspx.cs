@@ -99,7 +99,7 @@ namespace weetit_website
                     ////////////////THE MAPS PART///////////
                     if (canViewMap(comparisonOutput))
                     {
-                        answerbox.InnerHtml += "<div class=\"comparisonbox\">" +
+                        answerbox.InnerHtml += "<div class=\"comparisonbox expandableContent\">" +
                         "<div class=\"predicate\">" +
                             //this returns the predicate of all the tables
                         "Map" +
@@ -110,7 +110,7 @@ namespace weetit_website
                         List<string> mapstrings = viewMap(comparisonOutput);
                         foreach (string item in mapstrings)
                         {
-                            answerbox.InnerHtml += "<div class=\"datacell expandableContent\">";
+                            answerbox.InnerHtml += "<div class=\"datacell\">";
                             answerbox.InnerHtml += item;
                             answerbox.InnerHtml += "</div>";
 
@@ -132,7 +132,7 @@ namespace weetit_website
 
 
 
-                        answerbox.InnerHtml += "<div class=\"comparisonbox\">" +
+                        answerbox.InnerHtml += "<div class=\"comparisonbox expandableContent\">" +
                         "<div class=\"predicate\">" +
                             //this returns the predicate of all the tables
                         comparisonOutput[0].FinalComparisonObject[i].Key.Value +
@@ -144,7 +144,7 @@ namespace weetit_website
 
                         for (int j = 0; j < numberOfObjects; j++)
                         {
-                            answerbox.InnerHtml += "<div class=\"datacell expandableContent\">";
+                            answerbox.InnerHtml += "<div class=\"datacell\">";
                             //should be in a href key and value
                             for (int k = 0; k < comparisonOutput[j].FinalComparisonObject[i].Value.ToList().Count; k++)
                             {

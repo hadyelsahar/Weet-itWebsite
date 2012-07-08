@@ -26,13 +26,12 @@ function expand(obj) {
 function contract(obj) {
 
     //get the datacells
-    debugger;
     var datacells = $(obj).children(".window").children(".datarow").children(".datacell");
 
     datacells.each(function () {
-
+        debugger;
         if ($(this).children("span").length > 7) {
-            
+
             var links = $(this).children("span");
             var hidden = "<div class='hidden' style='display:none;'>" + $(this).html() + "</div>";
 
