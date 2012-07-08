@@ -13,7 +13,7 @@ namespace weetit_website
 
             try
             {
-                StreamWriter logWriter = new StreamWriter(@".\Log.txt", true);// File.AppendText(@".\Log.txt");
+                StreamWriter logWriter = new StreamWriter(HttpContext.Current.Server.MapPath("~/files/log.txt"), false);// File.AppendText(@".\Log.txt");
                 logWriter.Write(s + "\t" + DateTime.Now.ToLongTimeString().ToString() + "\n");
                 logWriter.Close();
             }

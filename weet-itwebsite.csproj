@@ -65,6 +65,7 @@
     <Content Include="files\RelateRegularExpression.txt" />
     <Content Include="files\RemoveRegularExpression.txt" />
     <Content Include="files\Separators.txt" />
+    <Content Include="files\log.txt" />
     <Content Include="Global.asax" />
     <Content Include="img\220px-WikiBex.jpg" />
     <Content Include="img\852221_f496.jpg" />

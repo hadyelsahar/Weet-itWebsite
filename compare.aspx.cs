@@ -16,7 +16,7 @@ namespace weetit_website
             {
                 if (Request.QueryString["q"] == null)
                 {
-                   // answerbox.InnerHtml = "<h3> No parameters to compare between... </h3>";
+                    answerbox.InnerHtml = "<h3> No parameters to compare between... </h3>";
                     return;
                 }
                 else

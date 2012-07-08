@@ -25,6 +25,7 @@ namespace weetit_website
             ipType = getSentenceType();
 
         }
+
         private types getSentenceType()
         {
             string[] comparisonKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/ComparissonRegularExpression.txt"));
