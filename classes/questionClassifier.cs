@@ -28,19 +28,7 @@ namespace weetit_website
 
         private types getSentenceType()
         {
-            string[] comparisonKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/ComparissonRegularExpression.txt"));
-            Regex[] comparisonRegex = new Regex[comparisonKeyWords.Length];
-            for (int i = 0; i < comparisonKeyWords.Length; i++ )
-            {
-                comparisonRegex[i] = new Regex(comparisonKeyWords[i]);
-            }         
-            foreach (Regex regx in comparisonRegex)
-            {              
-                if (regx.IsMatch(opText))
-                {
-                    return(types.comparison);
-                }
-            }
+
             string[] relateKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/relateRegularExpression.txt"));
             Regex[] relateRegex = new Regex[relateKeyWords.Length];
             for (int i = 0; i < relateKeyWords.Length; i++)
@@ -54,8 +42,24 @@ namespace weetit_website
                     return (types.relate);
                 }
             }
+            string[] comparisonKeyWords = File.ReadAllLines(HttpContext.Current.Server.MapPath("~/files/ComparissonRegularExpression.txt"));
+            Regex[] comparisonRegex = new Regex[comparisonKeyWords.Length];
+            for (int i = 0; i < comparisonKeyWords.Length; i++)
+            {
+                comparisonRegex[i] = new Regex(comparisonKeyWords[i]);
+            }
+            foreach (Regex regx in comparisonRegex)
+            {
+                if (regx.IsMatch(opText))
+                {
+                    return (types.comparison);
+                }
+            }
+
+
             return types.question;        
         }
+
 
 
 
